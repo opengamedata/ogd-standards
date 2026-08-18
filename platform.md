@@ -119,19 +119,24 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 | [burnett01/rsync-deployment](https://github.com/burnett01/rsync-deployment) | [7.0.1](https://github.com/burnett01/rsync-deployment/releases/tag/7.0.1) |
 | [google-github-actions/auth](https://github.com/google-github-actions/auth) | [v3](https://github.com/google-github-actions/auth/releases/tag/v3) |
 
-## OpenGameData Tools & Libraries - Compatible with Platform
+## OpenGameData Tools & Libraries - Platform Compatibility
 
-The following releases of tools, libraries, and APIs from the OpenGameData community are compatible with the platform version outlined above, and are recommended for use with any projects using this version of the platform:
+The following releases of tools, libraries, and APIs from the OpenGameData community are compatible with the platform versions listed.
 
-- Libraries
-  - opengamedata-core >= 0.0.14
-  - opengamedata-common >= 2.0.0
-  - OGDUtils >= 2.1.0
-  - APIUtils >= 1.1.0
-- Tools
-- GitHub Actions
-  - opengamedata/actions-openconnect-vpn >= v1.1
-  - opengamedata/actions-setup-ogd-py-dependencies >= v1.2
-  - opengamedata/actions-setup-ogd-py-build >= v2.0
-  - opengamedata/actions-setup-fd-git >= v1.0
-  - opengamedata/actions-execute-testbed >= v1.0
+| Package                                          | Latest Release | Software Platform Version |
+| ---                                              |                | ---                       |
+| Libraries                                        |                |                           |
+| `opengamedata-core`                              | 0.0.14         | N/A                       |
+| `opengamedata-common`                            | 2.0.0          | N/A                       |
+| `OGDUtils`                                       | 2.1.0          | N/A                       |
+| `APIUtils`                                       | 1.1.0          | N/A                       |
+| Tools                                            |                |                           |
+| `opengamedata-designdash`                        | N/A            | N/A                       |
+| `opengamedata-website`                           | N/A            | N/A                       |
+| `opengamedata-autocoder`                         | N/A            | N/A                       |
+| GitHub Actions                                   |                |                           |
+| `opengamedata/actions-openconnect-vpn`           | 1.1            | N/A                       |
+| `opengamedata/actions-setup-ogd-py-dependencies` | 1.2            | N/A                       |
+| `opengamedata/actions-setup-ogd-py-build`        | 2.0            | N/A                       |
+| `opengamedata/actions-setup-fd-git`              | 1.0            | N/A                       |
+| `opengamedata/actions-execute-testbed`           | 1.0            | N/A                       |
