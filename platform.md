@@ -40,6 +40,8 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 | [mysql-connector-python](https://pypi.org/project/mysql-connector-python/)               | [9.3.0](https://pypi.org/project/mysql-connector-python/9.3.0) |
 | [numpy](https://numpy.org/)                                                              | [2.1.*](https://pypi.org/project/numpy/2.1.3) |
 | [pandas](https://pandas.pydata.org/)                                                     | [2.2.*](https://pypi.org/project/pandas/2.2.3) |
+| paramiko                                                                                 | 3.5.* |
+| pyOpenSSL                                                                                | 23.0.* |
 | [requests](https://pypi.org/project/requests/)                                           | [2.32.*](https://pypi.org/project/requests/2.32.5) |
 | [scikit-learn](https://scikit-learn.org/stable/)                                         | [1.5.*](https://pypi.org/project/scikit-learn/1.5.2) |
 | [seaborn](http://seaborn.pydata.org/)                                                    | [0.13.*](https://pypi.org/project/seaborn/0.13.2) |
