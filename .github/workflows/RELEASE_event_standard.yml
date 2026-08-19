@@ -5,7 +5,6 @@ on:
 env:
   SOURCE_PATH: events
   CUSTOM_GEOMETRY: margin=2cm
-  FILE_LIST: introduction.md old-schema-v0.md schema.md category-standard.md glossary.md
   OUTFILE_NAME: event-standard.pdf
 
 jobs:
@@ -17,7 +16,7 @@ jobs:
     - name: Build PDF
       run: |
         cd ${{ env.SOURCE_PATH }}
-        pandoc ${{ env.FILE_LIST }} -V geometry:${{ env.CUSTOM_GEOMETRY }} -f markdown -t pdf -s -o ${{ env.OUTFILE_NAME }}
+        pandoc *.md -V geometry:${{ env.CUSTOM_GEOMETRY }} -f markdown -t pdf -s -o ${{ env.OUTFILE_NAME }}
     - name: Upload pdf as artifact
       uses: actions/upload-artifact@v4
       with:
