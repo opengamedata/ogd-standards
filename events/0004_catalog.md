@@ -11,17 +11,17 @@ Could benefit from separating different common mechanics, but need more than sin
 
 ### Summary of Proposed Ranges
 
-| Numeric Range | Range Name           | Description                                                                                |
-| --------      | -------------------- | ------------------------------------------------------------------------------------------ |
-| 1000          | Meta-Events          | Events that occur within the application, but are not a part of gameplay, e.g. navigating a main menu |
-| 2000          | Dialog               | Events relating to dialog and other “spoken” portions of gameplay, including cutscenes and tutorials. |
-| 3000          | Segmentation         | Events that indicate the player’s location within the game’s progression, world regions, or other discrete “segments” of the game |
-| 4000          | Player Actions       | Direct player interactions with the game |
-| 5000          | System Actions       | Instances of system feedback or other changes in game system state, often in response to player actions. |
-| 6000          | Other-Player Actions | Actions within the game taken by “other” players than the active player. Typically equivalent to player actions, but with a different actor. These are generally other players in a multiplayer session, but includes NPCs with sufficient “agency.” |
-| 7000          | Replay/Clickstream   | State captures or direct I/O events useful for replay systems |
-| 8000          | Experiments          | Events specifying any experimental conditions that applied to a gameplay session |
-| 9000          | Open Block           | Reserved for events that do not cleanly fit within the spec |
+| Numeric Range | Range Name                | Description                                                                                |
+| --------      | ------------------------- | ------------------------------------------------------------------------------------------ |
+| 1000          | Meta-Events               | Events that occur within the application, but are not a part of gameplay, e.g. navigating a main menu |
+| 2000          | Dialog                    | Events relating to dialog and other “spoken” portions of gameplay, including cutscenes and tutorials. |
+| 3000          | Segmentation              | Events that indicate the player’s location within the game’s progression, world regions, or other discrete “segments” of the game |
+| 4000          | Player Actions            | Direct player interactions with the game |
+| 5000          | Other-Human-Actor Actions | Actions within the game taken by “other” players than the active player. Typically equivalent to player actions, but with a different actor. These are generally other players in a multiplayer session, but includes NPCs with sufficient “agency.” |
+| 6000          | System-Controlled Actor Actions | Actions within the game taken by system-controlled actors, such as NPCs. Typically equivalent to player actions, but with a different actor. These are generally other players in a multiplayer session, but includes NPCs with sufficient “agency.” |
+| 7000          | System Actions            | Instances of system feedback or other changes in game system state, often in response to player actions. |
+| 8000          | Replay/Clickstream        | State captures or direct I/O events useful for replay systems |
+| 9000          | Open Block                | Reserved for events that do not cleanly fit within the spec |
 
 ### Proposed Ranges
 
@@ -34,11 +34,15 @@ Some general commitments:
 
 #### 1. Meta-Events
 
+Application and session context outside gameplay
+
 settings/setup/menu navigation
 pause/unpause
 focus loss / gain
 
 #### 2: Dialog
+
+Game-to-player communication
 
 Events relating to dialog within a game. This might include cutscenes, narration, feedback pop-ups, as well as traditional dialog trees.
 
@@ -65,6 +69,8 @@ We propose the following general verbs, used within the various sub-blocks:
 
 #### 3: Segmentation
 
+Game structure and progression
+
 The 3000 block is use for segmentation-related events, that indicate the player moving to another “part” of the game, whether in terms of progression or location in the game.
 
 Within the block, we assign the following 100-level blocks:
@@ -75,6 +81,8 @@ Within the block, we assign the following 100-level blocks:
 
 #### 4: Active-Player Actions
 
+Intentional (focal) player actions
+
 Within this block we’ve had a philosophy that there is no “click”, everything is an action taken within the context of the game, not related to the hardware interface.
 
 We’re currently thinking of a few "hundreds blocks” in this group:
@@ -84,7 +92,25 @@ We’re currently thinking of a few "hundreds blocks” in this group:
 3. **State Machine Actions**
 4. **Game Specific “Interacts”**
 
-#### 5: System Actions
+#### 5: Non-Active-Player Actions
+
+Actions within the game taken by “other” players than the active player. Equivalent to player actions, but executed by another (non-focal) human player
+
+Actions by players other than the active user, whether these are from other players or AI agents. Likely only includes events that are visible to the active player in some way
+
+* meant for things like multiplayer
+
+#### 6: System-Controlled Actor Actions
+
+Gameplay actions performed by non-focal actors whose behavior is controlled by the game rather than by a human player
+
+Actions by actors controlled directly by the game system, such as NPCs or in-game enemies.
+
+#### 7: System Actions
+
+System-performed actions within gameplay
+
+Actions within the game taken by “other” players than the active player. Equivalent to player actions, but executed by another (non-focal) human player
 
 The events by the game system, often as the result of a player action. They typically affect all players equally, whether the active player, a 3rd-party player, or AI agent
 
@@ -92,20 +118,18 @@ The events by the game system, often as the result of a player action. They typi
 * changes in underlying simulation values (health, currency, etc)
 * All physics engine related stuff (collision, triggering)
 
-#### 6: Non-Active-Player Actions
+#### 8: Replay/Clickstream Events
 
-Actions by players other than the active user, whether these are from other players or AI agents. Likely only includes events that are visible to the active player in some way
-
-* meant for things like multiplayer
-
-#### 7: Replay/Clickstream Events
+State captures or direct I/O events useful for replay systems
 
 for replay via game state interpolation on “ticks”, or via buffer actions. More broadly, recording hardware-level interactions (clicks, mouse movements, vr controllers)
 
-#### 8: Experiments
+<!-- #### 8: Experiments
 
-questionnaires, condition assignments
+questionnaires, condition assignments -->
 
 #### 9: “Open” Block
+
+Reserved for events that do not cleanly fit within the spec
 
 1000 free event codes with no attached conventions
