@@ -1,0 +1,25 @@
+name: Release Event Standard
+on:
+  workflow_dispatch:
+
+env:
+  SOURCE_PATH: events
+  CUSTOM_GEOMETRY: margin=2cm
+  FILE_LIST: introduction.md old-schema-v0.md schema.md category-standard.md glossary.md
+  OUTFILE_NAME: event-standard.pdf
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: pandoc/latex:3.10-ubuntu
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build PDF
+      run: |
+        cd ${{ env.SOURCE_PATH }}
+        pandoc ${{ env.FILE_LIST }} -V geometry:${{ env.CUSTOM_GEOMETRY }} -f markdown -t pdf -s -o ${{ env.OUTFILE_NAME }}
+    - name: Upload pdf as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: event-standard.pdf
+        path: ${{ env.SOURCE_PATH }}/${{ env.OUTFILE_NAME }}
