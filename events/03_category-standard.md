@@ -11,8 +11,8 @@ Could benefit from separating different common mechanics, but need more than sin
 
 ### Summary of Proposed Ranges
 
-| Numeric Range | Range Name           | Description |
-| ---           | ---                  | ---         |
+| Numeric Range | Range Name           | Description                              |
+| ------------- | -------------------- | ---------------------------------------- |
 | 1000          | Meta-Events          | Events that occur within the application, but are not a part of gameplay, e.g. navigating a main menu |
 | 2000          | Dialog               | Events relating to dialog and other “spoken” portions of gameplay, including cutscenes and tutorials. |
 | 3000          | Segmentation         | Events that indicate the player’s location within the game’s progression, world regions, or other discrete “segments” of the game |
