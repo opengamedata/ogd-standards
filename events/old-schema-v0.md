@@ -1,6 +1,7 @@
 ## Existing v0.1 Event Schema
 
-| Name                 | Data Type | Required | Brief Description |
+| Name                 | Data Type | Required | Brief Description                                                 |
+| -------------------- | --------- | -------- | ------------------------------------------------------------------|
 | game_id              | string    | Yes      | A unique, human-readable ID for the game that generated the data. |
 | session_id           | int       | Yes      | A unique string of digits to identify a gameplay session, from the time the game was opened to the time it was closed. |
 | user_id              | string    | No       | A non-identifiable, randomly-assigned ID for keeping track of a single player across multiple gameplay sessions. |
