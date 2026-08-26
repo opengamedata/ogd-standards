@@ -42,6 +42,7 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 | [pandas][pandas-link]                                 | [2.2.*](https://pypi.org/project/pandas/2.2.3) |
 | [paramiko][paramiko-link]                             | [3.5.*](https://pypi.org/project/paramiko/3.5.1/) |
 | [pyOpenSSL][pyOpenSSL-link]                           | [23.0.*](https://pypi.org/project/pyOpenSSL/23.0.0/) |
+| [python-dateutil][dateutil-link]                      | [2.9.*](https://pypi.org/project/python-dateutil/2.9.0.post0/) |
 | [requests][requests-link]                             | [2.32.*](https://pypi.org/project/requests/2.32.5) |
 | [scikit-learn][scikit-link]                           | [1.5.*](https://pypi.org/project/scikit-learn/1.5.2) |
 | [seaborn][seaborn-link]                               | [0.13.*](https://pypi.org/project/seaborn/0.13.2) |
@@ -65,6 +66,7 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 [pandas-link]: https://pandas.pydata.org/
 [paramiko-link]: https://www.paramiko.org/
 [pyopenssl-link]: https://pypi.org/project/pyOpenSSL/
+[dateutil-link]: https://pypi.org/project/python-dateutil/
 [requests-link]: https://pypi.org/project/requests/
 [scikit-link]: https://scikit-learn.org/stable/
 [seaborn-link]: http://seaborn.pydata.org/
