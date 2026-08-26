@@ -194,20 +194,33 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 
 The following releases of tools, libraries, and APIs from the OpenGameData community are compatible with the platform versions listed.
 
-| Package                                          | Latest Release | Software Platform Version |
-| ---                                              |                | ---                       |
-| Libraries                                        |                |                           |
-| `opengamedata-core`                              | 0.0.14         | N/A                       |
-| `opengamedata-common`                            | 2.0.0          | N/A                       |
-| `OGDUtils`                                       | 2.1.0          | N/A                       |
-| `APIUtils`                                       | 1.1.0          | N/A                       |
-| Tools                                            |                |                           |
-| `opengamedata-designdash`                        | N/A            | N/A                       |
-| `opengamedata-website`                           | N/A            | N/A                       |
-| `opengamedata-autocoder`                         | N/A            | N/A                       |
-| GitHub Actions                                   |                |                           |
-| `opengamedata/actions-openconnect-vpn`           | 1.1            | N/A                       |
-| `opengamedata/actions-setup-ogd-py-dependencies` | 1.2            | N/A                       |
-| `opengamedata/actions-setup-ogd-py-build`        | 2.0            | N/A                       |
-| `opengamedata/actions-setup-fd-git`              | 1.0            | N/A                       |
-| `opengamedata/actions-execute-testbed`           | 1.0            | N/A                       |
+| Package                                                              | Latest Release | Software Platform Version |
+| ---                                                                  | ---            | ---                       |
+| Libraries                                                            |                |                           |
+| [opengamedata-core][core-link]                                       | 0.0.14         | N/A                       |
+| [opengamedata-common][common-link]                                   | 2.0.0          | N/A                       |
+| [OGDUtils][ogdutil-link]                                             | 2.1.0          | N/A                       |
+| [APIUtils][apiutil-link]                                             | 1.1.0          | N/A                       |
+| Tools                                                                |                |                           |
+| [opengamedata-designdash][dash-link]                                 | N/A            | N/A                       |
+| [opengamedata-website][website-link]                                 | N/A            | N/A                       |
+| [opengamedata-autocoder][autocoder-link]                             | N/A            | N/A                       |
+| GitHub Actions                                                       |                |                           |
+| [opengamedata/actions-openconnect-vpn][openconnect-action-link]      | 1.1            | N/A                       |
+| [opengamedata/actions-setup-ogd-py-dependencies][pydeps-action-link] | 1.2            | N/A                       |
+| [opengamedata/actions-setup-ogd-py-build][pybuild-action-link]       | 2.0            | N/A                       |
+| [opengamedata/actions-setup-fd-git][git-action-link]                 | 1.0            | N/A                       |
+| [opengamedata/actions-execute-testbed][testbed-action-link]          | 1.0            | N/A                       |
+
+[core-link]: https://github.com/opengamedata/ogd-core
+[common-link]: https://github.com/opengamedata/ogd-common
+[ogdutil-link]: https://github.com/opengamedata/OGDUtils
+[apiutil-link]: https://github.com/opengamedata/ogd-api-utils
+[dash-link]: https://github.com/opengamedata/ogd-designdash
+[website-link]: https://github.com/opengamedata/opengamedata-website
+[autocoder-link]: https://github.com/opengamedata/ogd-autocoder
+[openconnect-action-link]: https://github.com/opengamedata/actions-openconnect-vpn
+[pydeps-action-link]: https://github.com/opengamedata/actions-setup-ogd-py-dependencies
+[pybuild-action-link]: https://github.com/opengamedata/actions-setup-ogd-py-build
+[git-action-link]: https://github.com/opengamedata/actions-setup-fd-git
+[testbed-action-link]: https://github.com/opengamedata/actions-execute-testbed
