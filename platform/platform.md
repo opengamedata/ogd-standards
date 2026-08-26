@@ -201,10 +201,19 @@ The following releases of tools, libraries, and APIs from the OpenGameData commu
 | [opengamedata-common][common-link]                                   | 2.0.0          | N/A                       |
 | [OGDUtils][ogdutil-link]                                             | 2.1.0          | N/A                       |
 | [APIUtils][apiutil-link]                                             | 1.1.0          | N/A                       |
-| Tools                                                                |                |                           |
-| [opengamedata-designdash][dash-link]                                 | N/A            | N/A                       |
-| [opengamedata-website][website-link]                                 | N/A            | N/A                       |
+| Analysis Tools                                                       |                |                           |
 | [opengamedata-autocoder][autocoder-link]                             | N/A            | N/A                       |
+| [opengamedata-designdash][dash-link]                                 | 1.0.0          | N/A                       |
+| [opengamedata-website][website-link]                                 | 2024.06.08     | N/A                       |
+| [opengamedata-platform][platform-link]                               | N/A            | N/A                       |
+| [opengamedata-samples][samples-link]                                 | N/A            | N/A                       |
+| Telemetry Tools                                                      |                |                           |
+| [opengamedata-monitor][monitor-link]                                 | N/A            | N/A                       |
+| [opengamedata-logger][logger-link]                                   | 2.0.1          | N/A                       |
+| [opengamedata-automation][automation-link]                           | 25.09          | N/A                       |
+| Web APIs                                                             |                |                           |
+| [opengamedata-api-files][files-link]                                 | 2.2.1          | N/A                       |
+| [opengamedata-api-players][players-link]                             | N/A            | N/A                       |
 | GitHub Actions                                                       |                |                           |
 | [opengamedata/actions-openconnect-vpn][openconnect-action-link]      | 1.1            | N/A                       |
 | [opengamedata/actions-setup-ogd-py-dependencies][pydeps-action-link] | 1.2            | N/A                       |
@@ -216,9 +225,16 @@ The following releases of tools, libraries, and APIs from the OpenGameData commu
 [common-link]: https://github.com/opengamedata/ogd-common
 [ogdutil-link]: https://github.com/opengamedata/OGDUtils
 [apiutil-link]: https://github.com/opengamedata/ogd-api-utils
-[dash-link]: https://github.com/opengamedata/ogd-designdash
-[website-link]: https://github.com/opengamedata/opengamedata-website
 [autocoder-link]: https://github.com/opengamedata/ogd-autocoder
+[dash-link]: https://github.com/opengamedata/ogd-designdash
+[website-link]: https://github.com/opengamedata/ogd-website
+[platform-link]: https://github.com/opengamedata/ogd-platform
+[samples-link]: https://github.com/opengamedata/ogd-samples
+[monitor-link]: https://github.com/opengamedata/ogd-monitor
+[logger-link]: https://github.com/opengamedata/ogd-logger
+[automation-link]: https://github.com/opengamedata/ogd-automation
+[files-link]: https://github.com/opengamedata/ogd-api-files
+[players-link]: https://github.com/opengamedata/ogd-api-players
 [openconnect-action-link]: https://github.com/opengamedata/actions-openconnect-vpn
 [pydeps-action-link]: https://github.com/opengamedata/actions-setup-ogd-py-dependencies
 [pybuild-action-link]: https://github.com/opengamedata/actions-setup-ogd-py-build
