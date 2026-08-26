@@ -172,13 +172,13 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 
 | Package                                        | Version                                 |
 | ---                                            | ---                                     |
-| [actions/checkout][checkout-link]              | [v4](https://github.com/actions/checkout/releases/tag/v4.3.1) |
-| [actions/cache/save][cache-save-link]          | [v4](https://github.com/actions/cache/releases/tag/v4.3.0) |
-| [actions/cache/restore][cache-restore-link]    | [v4](https://github.com/actions/cache/releases/tag/v4.3.0) |
-| [actions/upload-artifact][upload-link]         | [v4](https://github.com/actions/upload-artifact/releases/tag/v4.6.2) |
-| [actions/setup-node][setup-node-link]          | [v4.4.0](https://github.com/actions/setup-node/releases/tag/v4.4.0) |
-| [actions/setup-python][setup-py-link]          | [v5.3](https://github.com/actions/setup-python/releases/tag/v5.3.0) |
-| [burnett01/rsync-deployment][rsync-link]       | [7.0.1](https://github.com/burnett01/rsync-deployment/releases/tag/7.0.1) |
+| [actions/checkout][checkout-link]              | [v7.0](https://github.com/actions/checkout/releases/tag/v7.0.1) |
+| [actions/cache/save][cache-save-link]          | [v6.1](https://github.com/actions/cache/releases/tag/v6.1.0) |
+| [actions/cache/restore][cache-restore-link]    | [v6.1](https://github.com/actions/cache/releases/tag/v6.1.0) |
+| [actions/upload-artifact][upload-link]         | [v7.0](https://github.com/actions/upload-artifact/releases/tag/v7.0.1) |
+| [actions/setup-node][setup-node-link]          | [v7.0](https://github.com/actions/setup-node/releases/tag/v7.0.0) |
+| [actions/setup-python][setup-py-link]          | [v7.0](https://github.com/actions/setup-python/releases/tag/v7.0.0) |
+| [burnett01/rsync-deployments][rsync-link]      | [v9](https://github.com/Burnett01/rsync-deployments/releases/tag/v9) |
 | [google-github-actions/auth][google-auth-link] | [v3](https://github.com/google-github-actions/auth/releases/tag/v3) |
 
 [checkout-link]: https://github.com/actions/checkout
@@ -187,7 +187,7 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 [upload-link]: https://github.com/actions/upload-artifact
 [setup-node-link]: https://github.com/actions/setup-node
 [setup-py-link]: https://github.com/actions/setup-python
-[rsync-link]: https://github.com/burnett01/rsync-deployment
+[rsync-link]: https://github.com/burnett01/rsync-deployments
 [google-auth-link]: https://github.com/google-github-actions/auth
 
 ## OpenGameData Tools & Libraries - Compatible with Platform
