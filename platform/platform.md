@@ -94,42 +94,45 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 
 #### JS Libraries
 
-- @heroicons/
-  - react ^2.0.13
-- @popperjs/
-  - core ^2.11.6
-- @tailwindcss/
-  - forms ^0.5.3
-- @testing-library/
-  - jest-dom ^5.16.5
-  - react ^13.4.0
-  - user-event ^14.4.3
-- @types/
-  - node ^18.11.18
-  - react ^18.0.26
-  - react-dom ^18.0.10
+| Package                                        | Version        |
+| ---                                            | ---            |
+| [@heroicons/react][heroicons-link]             | [^2.0.13](https://www.npmjs.com/package/@heroicons/react/v/2.0.13)    |
+| [@popperjs/core][popper-link]                  | [^2.11.6](https://www.npmjs.com/package/@popperjs/core/v/2.11.6)    |
+| [@tailwindcss/forms][tailwindforms-link]       | [^0.5.3](https://www.npmjs.com/package/@tailwindcss/forms/v/0.5.3)     |
+| [@testing-library/jest-dom][jest-dom-link]     | [^5.16.5](https://www.npmjs.com/package/@testing-library/jest-dom/v/5.16.5)    |
+| [@testing-library/react][test-react-link]      | [^13.4.0](https://www.npmjs.com/package/@testing-library/react/v/13.4.0)    |
+| [@testing-library/user-event][user-event-link] | [^14.4.3](https://www.npmjs.com/package/@testing-library/user-event/v/14.4.3)    |
+| [@types/node][node-type-link]                  | [^18.11.18](https://www.npmjs.com/package/@types/node/v/18.11.18)  |
+| [@types/react][react-type-link]                | [^18.0.26](https://www.npmjs.com/package/@types/react/v/18.0.26)   |
+| [@types/react-dom][react-dom-type-link]        | [^18.0.10](https://www.npmjs.com/package/@types/react-dom/v/18.0.10)   |
+| [axios][axios-link]                            | [^1.3.4](https://www.npmjs.com/package/axios/v/1.3.4) |
+| [bootstrap][bootstrap-link]                    | [^5.2.3](https://www.npmjs.com/package/bootstrap/v/5.3.4) |
+| [browser-sync][browsync-link]                  | ^2.2.28.3 |
+| [c3][c3-link]                                  | [^0.7.20](https://www.npmjs.com/package/c3/v/0.7.20) |
+| [chart.js][chart-link]                         | [.js ^4.2.1](https://www.npmjs.com/package/chart.js/v/4.2.1) |
+| [d3][d3-link]                                  | [^7.8.0](https://www.npmjs.com/package/d3/v/7.8.0) |
+| [d3-selection-multi][d3-select-link]           | [^1.0.1](https://www.npmjs.com/package/d3-selection-multi/v/1.0.1) |
+| [gulp][gulp-link]                              | [^4.0.2](https://www.npmjs.com/package/gulp/v/4.0.2) |
+| [gulp-sass][gulp-sass-link]                    | [^5.1.0](https://www.npmjs.com/package/gulp-sass/v/5.1.0) |
+| [jsdoc-typeof-plugin][jsdoc-type-link]         | [^1.0.0](https://www.npmjs.com/package/jsdoc-typeof-plugin/v/1.0.0) |
+| [tailwindcss][tailwind-link]                   | [^3.2.4](https://www.npmjs.com/package/tailwindcss/v/3.2.4) |
+| [typescript][typescript-link]                  | [^4.9.4](https://www.npmjs.com/package/typescript/v/4.9.4) |
+| [react][react-link]                            | [^18.2.0](https://www.npmjs.com/package/react/v/18.2.0) |
+| [react-dom][react-dom-link]                    | [^18.2.0](https://www.npmjs.com/package/react-dom/v/18.2.0) |
+| [react-router-dom][react-router-link]          | [^6.6.2](https://www.npmjs.com/package/react-router-dom/v/6.6.2) |
+| [react-scripts][react-scripts-link]            | [^5.0.1](https://www.npmjs.com/package/react-scripts/v/5.0.1) |
+| [sass][sass-link]                              | [^1.58.3](https://www.npmjs.com/package/sass/v/1.58.3) |
+| [web-vitals][web-vitals-link]                  | [^3.1.0](https://www.npmjs.com/package/web-vitals/v/3.1.0) |
 
-| Package                                | Version        |
-| ---                                    | ---            |
-| [axios][axios-link]                    | [^1.3.4](https://www.npmjs.com/package/axios/v/1.3.4) |
-| [bootstrap][bootstrap-link]            | [^5.2.3](https://www.npmjs.com/package/bootstrap/v/5.3.4) |
-| [browser-sync][browsync-link]          | ^2.2.28.3 |
-| [c3][c3-link]                          | [^0.7.20](https://www.npmjs.com/package/c3/v/0.7.20) |
-| [chart.js][chart-link]                 | [.js ^4.2.1](https://www.npmjs.com/package/chart.js/v/4.2.1) |
-| [d3][d3-link]                          | [^7.8.0](https://www.npmjs.com/package/d3/v/7.8.0) |
-| [d3-selection-multi][d3-select-link]   | [^1.0.1](https://www.npmjs.com/package/d3-selection-multi/v/1.0.1) |
-| [gulp][gulp-link]                      | [^4.0.2](https://www.npmjs.com/package/gulp/v/4.0.2) |
-| [gulp-sass][gulp-sass-link]            | [^5.1.0](https://www.npmjs.com/package/gulp-sass/v/5.1.0) |
-| [jsdoc-typeof-plugin][jsdoc-type-link] | [^1.0.0](https://www.npmjs.com/package/jsdoc-typeof-plugin/v/1.0.0) |
-| [tailwindcss][tailwind-link]           | [^3.2.4](https://www.npmjs.com/package/tailwindcss/v/3.2.4) |
-| [typescript][typescript-link]          | [^4.9.4](https://www.npmjs.com/package/typescript/v/4.9.4) |
-| [react][react-link]                    | [^18.2.0](https://www.npmjs.com/package/react/v/18.2.0) |
-| [react-dom][react-dom-link]            | [^18.2.0](https://www.npmjs.com/package/react-dom/v/18.2.0) |
-| [react-router-dom][react-router-link]  | [^6.6.2](https://www.npmjs.com/package/react-router-dom/v/6.6.2) |
-| [react-scripts][react-scripts-link]    | [^5.0.1](https://www.npmjs.com/package/react-scripts/v/5.0.1) |
-| [sass][sass-link]                      | [^1.58.3](https://www.npmjs.com/package/sass/v/1.58.3) |
-| [web-vitals][web-vitals-link]          | [^3.1.0](https://www.npmjs.com/package/web-vitals/v/3.1.0) |
-
+[heroicons-link]: https://github.com/tailwindlabs/heroicons#readme
+[popper-link]: https://github.com/popperjs/popper-core#readme
+[tailwindforms-link]: https://github.com/tailwindlabs/tailwindcss-forms#readme
+[jest-dom-link]: https://github.com/testing-library/jest-dom#readme
+[test-react-link]: https://github.com/testing-library/react-testing-library#readme
+[user-event-link]: https://github.com/testing-library/user-event#readme
+[node-type-link]: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
+[react-type-link]: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react
+[react-dom-type-link]: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-dom
 [axios-link]: https://axios-http.com/
 [bootstrap-link]: https://getbootstrap.com/
 [browsync-link]: https://browsersync.io/
