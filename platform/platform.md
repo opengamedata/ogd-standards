@@ -20,44 +20,73 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 
 ### Python
 
-- Python: 3.12
+- [Python](https://www.python.org/): [3.12](https://www.python.org/downloads/release/python-31214/)
 
 #### Python Libraries
 
-| Package                                                                                  | Version                                 |
-| ---                                                                                      | ---                                     |
-| [gitdb](https://pypi.org/project/gitdb/)                                                 | [4.0.*](https://pypi.org/project/gitdb/4.0.12/) |
-| [GitPython](https://pypi.org/project/GitPython/)                                         | [3.1.*](https://pypi.org/project/GitPython/3.1.44/) |
-| [flask](https://flask.palletsprojects.com/en/stable/)                                    | [2.3.3](https://pypi.org/project/Flask/2.3.3/) |
-| [flask-cors](https://pypi.org/project/flask-cors/)                                       | [6.0.1](https://pypi.org/project/flask-cors/6.0.1/) |
-| [flask-restful](https://pypi.org/project/Flask-RESTful/)                                 | [0.3.10](https://pypi.org/project/Flask-RESTful/0.3.10/) |
-| [Flask-SocketIO](https://pypi.org/project/Flask-SocketIO/)                               | [5.3.6](https://pypi.org/project/Flask-SocketIO/5.3.6/) |
-| [google-auth](https://pypi.org/project/google-auth/)                                     | [2.16.1](https://pypi.org/project/google-auth/2.16.1/) |
-| [google-cloud-bigquery](https://pypi.org/project/google-cloud-bigquery/)                 | [3.37.0](https://pypi.org/project/google-cloud-bigquery/3.37.0) |
-| [google-cloud-bigquery-storage](https://pypi.org/project/google-cloud-bigquery-storage/) | [2.33.1](https://pypi.org/project/google-cloud-bigquery-storage/2.33.1) |
-| [ipywidgets](https://pypi.org/project/ipywidgets/)                                       | [8.0.*](https://pypi.org/project/ipywidgets/8.0.7) |
-| [matplotlib](https://matplotlib.org/)                                                    | [3.9.*](https://pypi.org/project/matplotlib/3.9.4) |
-| [mysql-connector-python](https://pypi.org/project/mysql-connector-python/)               | [9.3.0](https://pypi.org/project/mysql-connector-python/9.3.0) |
-| [numpy](https://numpy.org/)                                                              | [2.1.*](https://pypi.org/project/numpy/2.1.3) |
-| [pandas](https://pandas.pydata.org/)                                                     | [2.2.*](https://pypi.org/project/pandas/2.2.3) |
-| [paramiko](https://www.paramiko.org/)                                                    | [3.5.*](https://pypi.org/project/paramiko/3.5.1/) |
-| [pyOpenSSL](https://pypi.org/project/pyOpenSSL/)                                         | [23.0.*](https://pypi.org/project/pyOpenSSL/23.0.0/) |
-| [requests](https://pypi.org/project/requests/)                                           | [2.32.*](https://pypi.org/project/requests/2.32.5) |
-| [scikit-learn](https://scikit-learn.org/stable/)                                         | [1.5.*](https://pypi.org/project/scikit-learn/1.5.2) |
-| [seaborn](http://seaborn.pydata.org/)                                                    | [0.13.*](https://pypi.org/project/seaborn/0.13.2) |
-| [sshtunnel](https://pypi.org/project/sshtunnel/)                                         | [0.4.0](https://pypi.org/project/sshtunnel/0.4.0) |
-| [statsmodels](https://www.statsmodels.org/)                                              | [0.14.*](https://pypi.org/project/statsmodels/0.14.5) |
-| [tensorflow](https://www.tensorflow.org/)                                                | [2.17.*](https://pypi.org/project/tensorflow/2.17.1) |
+| Package                                               | Version                                 |
+| ---                                                   | ---                                     |
+| [gitdb][gitdb-link]                                   | [4.0.*](https://pypi.org/project/gitdb/4.0.12/) |
+| [GitPython][gitpy-link]                               | [3.1.*](https://pypi.org/project/GitPython/3.1.44/) |
+| [flask][flask-link]                                   | [2.3.3](https://pypi.org/project/Flask/2.3.3/) |
+| [flask-cors][flask-cors-link]                         | [6.0.1](https://pypi.org/project/flask-cors/6.0.1/) |
+| [flask-restful][flask-rest-link]                      | [0.3.10](https://pypi.org/project/Flask-RESTful/0.3.10/) |
+| [Flask-SocketIO][flask-socket-link]                   | [5.3.6](https://pypi.org/project/Flask-SocketIO/5.3.6/) |
+| [google-auth][google-auth-link]                       | [2.16.1](https://pypi.org/project/google-auth/2.16.1/) |
+| [google-cloud-bigquery][google-bq-link]               | [3.37.0](https://pypi.org/project/google-cloud-bigquery/3.37.0) |
+| [google-cloud-bigquery-storage][google-bq-store-link] | [2.33.1](https://pypi.org/project/google-cloud-bigquery-storage/2.33.1) |
+| [ipywidgets][ipywid-link]                             | [8.0.*](https://pypi.org/project/ipywidgets/8.0.7) |
+| [matplotlib][matplotlib-link]                         | [3.9.*](https://pypi.org/project/matplotlib/3.9.4) |
+| [mysql-connector-python][mysql-py-link]               | [9.3.0](https://pypi.org/project/mysql-connector-python/9.3.0) |
+| [numpy][numpy-link]                                   | [2.1.*](https://pypi.org/project/numpy/2.1.3) |
+| [pandas][pandas-link]                                 | [2.2.*](https://pypi.org/project/pandas/2.2.3) |
+| [paramiko][paramiko-link]                             | [3.5.*](https://pypi.org/project/paramiko/3.5.1/) |
+| [pyOpenSSL][pyOpenSSL-link]                           | [23.0.*](https://pypi.org/project/pyOpenSSL/23.0.0/) |
+| [requests][requests-link]                             | [2.32.*](https://pypi.org/project/requests/2.32.5) |
+| [scikit-learn][scikit-link]                           | [1.5.*](https://pypi.org/project/scikit-learn/1.5.2) |
+| [seaborn][seaborn-link]                               | [0.13.*](https://pypi.org/project/seaborn/0.13.2) |
+| [sshtunnel][sshtunnel-link]                           | [0.4.0](https://pypi.org/project/sshtunnel/0.4.0) |
+| [statsmodels][statsmods-link]                         | [0.14.*](https://pypi.org/project/statsmodels/0.14.5) |
+| [tensorflow][tensorflow-link]                         | [2.17.*](https://pypi.org/project/tensorflow/2.17.1) |
+
+[gitdb-link]: https://pypi.org/project/gitdb/
+[gitpy-link]: https://pypi.org/project/GitPython/
+[flask-link]: https://flask.palletsprojects.com/en/stable/
+[flask-cors-link]: https://pypi.org/project/flask-cors/
+[flask-rest-link]: https://pypi.org/project/Flask-RESTful/
+[flask-socket-link]: https://pypi.org/project/Flask-SocketIO/
+[google-auth-link]: https://pypi.org/project/google-auth/
+[google-bq-link]: https://pypi.org/project/google-cloud-bigquery/
+[google-bq-store-link]: https://pypi.org/project/google-cloud-bigquery-storage/
+[ipywid-link]: https://pypi.org/project/ipywidgets/
+[matplotlib-link]: https://matplotlib.org/
+[mysql-py-link]: https://pypi.org/project/mysql-connector-python/
+[numpy-link]: https://numpy.org/
+[pandas-link]: https://pandas.pydata.org/
+[paramiko-link]: https://www.paramiko.org/
+[pyopenssl-link]: https://pypi.org/project/pyOpenSSL/
+[requests-link]: https://pypi.org/project/requests/
+[scikit-link]: https://scikit-learn.org/stable/
+[seaborn-link]: http://seaborn.pydata.org/
+[sshtunnel-link]: https://pypi.org/project/sshtunnel/
+[statsmods-link]: https://www.statsmodels.org/
+[tensorflow-link]: https://www.tensorflow.org/
 
 #### Python Build Tools
 
-| Package                                                                          | Version                                 |
-| ---                                                                              | ---                                     |
-| [build](https://pypi.org/project/build/)                                         | [1.2.*](https://pypi.org/project/build/1.2.2.post1/) |
-| [setuptools](https://setuptools.pypa.io/en/latest/)                              | [74.1.*](https://pypi.org/project/setuptools/74.1.3/) |
-| [setuptools-git-versioning](https://pypi.org/project/setuptools-git-versioning/) | [2.0.*](https://pypi.org/project/setuptools-git-versioning/2.0.0/) |
-| [twine](https://pypi.org/project/twine/)                                         | [5.1.1](https://pypi.org/project/twine/5.1.1/) |
-| [wheel](https://pypi.org/project/wheel/)                                         | [0.44.*](https://pypi.org/project/wheel/0.44.0/) |
+| Package                                     | Version                                 |
+| ---                                         | ---                                     |
+| [build][build-link]                         | [1.2.*](https://pypi.org/project/build/1.2.2.post1/) |
+| [setuptools][setup-link]                    | [74.1.*](https://pypi.org/project/setuptools/74.1.3/) |
+| [setuptools-git-versioning][setup-git-link] | [2.0.*](https://pypi.org/project/setuptools-git-versioning/2.0.0/) |
+| [twine][twine-link]                         | [5.1.1](https://pypi.org/project/twine/5.1.1/) |
+| [wheel][wheel-link]                         | [0.44.*](https://pypi.org/project/wheel/0.44.0/) |
+
+[build-link]: https://pypi.org/project/build/
+[setup-link]: https://setuptools.pypa.io/en/latest/
+[setup-git-link]: https://pypi.org/project/setuptools-git-versioning/
+[twine-link]: https://pypi.org/project/twine/
+[wheel-link]: https://pypi.org/project/wheel/
 
 ### JavaScript
 
@@ -108,16 +137,25 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 
 ### GitHub Actions
 
-| Package                                                                     | Version                                 |
-| ---                                                                         | ---                                     |
-| [actions/checkout](https://github.com/actions/checkout)                     | [v4](https://github.com/actions/checkout/releases/tag/v4.3.1) |
-| [actions/cache/save](https://github.com/actions/cache/)                     | [v4](https://github.com/actions/cache/releases/tag/v4.3.0) |
-| [actions/cache/restore](https://github.com/actions/cache)                   | [v4](https://github.com/actions/cache/releases/tag/v4.3.0) |
-| [actions/upload-artifact](https://github.com/actions/upload-artifact)       | [v4](https://github.com/actions/upload-artifact/releases/tag/v4.6.2) |
-| [actions/setup-node](https://github.com/actions/setup-node)                 | [v4.4.0](https://github.com/actions/setup-node/releases/tag/v4.4.0) |
-| [actions/setup-python](https://github.com/actions/setup-python)             | [v5.3](https://github.com/actions/setup-python/releases/tag/v5.3.0) |
-| [burnett01/rsync-deployment](https://github.com/burnett01/rsync-deployment) | [7.0.1](https://github.com/burnett01/rsync-deployment/releases/tag/7.0.1) |
-| [google-github-actions/auth](https://github.com/google-github-actions/auth) | [v3](https://github.com/google-github-actions/auth/releases/tag/v3) |
+| Package                                        | Version                                 |
+| ---                                            | ---                                     |
+| [actions/checkout][checkout-link]              | [v4](https://github.com/actions/checkout/releases/tag/v4.3.1) |
+| [actions/cache/save][cache-save-link]          | [v4](https://github.com/actions/cache/releases/tag/v4.3.0) |
+| [actions/cache/restore][cache-restore-link]    | [v4](https://github.com/actions/cache/releases/tag/v4.3.0) |
+| [actions/upload-artifact][upload-link]         | [v4](https://github.com/actions/upload-artifact/releases/tag/v4.6.2) |
+| [actions/setup-node][setup-node-link]          | [v4.4.0](https://github.com/actions/setup-node/releases/tag/v4.4.0) |
+| [actions/setup-python][setup-py-link]          | [v5.3](https://github.com/actions/setup-python/releases/tag/v5.3.0) |
+| [burnett01/rsync-deployment][rsync-link]       | [7.0.1](https://github.com/burnett01/rsync-deployment/releases/tag/7.0.1) |
+| [google-github-actions/auth][google-auth-link] | [v3](https://github.com/google-github-actions/auth/releases/tag/v3) |
+
+[checkout-link]: https://github.com/actions/checkout
+[cache-save-link]: https://github.com/actions/cache/
+[cache-restore-link]: https://github.com/actions/cache
+[upload-link]: https://github.com/actions/upload-artifact
+[setup-node-link]: https://github.com/actions/setup-node
+[setup-py-link]: https://github.com/actions/setup-python
+[rsync-link]: https://github.com/burnett01/rsync-deployment
+[google-auth-link]: https://github.com/google-github-actions/auth
 
 ## OpenGameData Tools & Libraries - Compatible with Platform
 
