@@ -90,7 +90,7 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 
 ### JavaScript
 
-- nodejs v22
+- [nodejs](https://nodejs.org/en): [v22](https://nodejs.org/en/download/archive/v22)
 
 #### JS Libraries
 
@@ -109,31 +109,59 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
   - react ^18.0.26
   - react-dom ^18.0.10
 
-- axios ^1.3.4
-- bootstrap ^5.2.3
-- browser-sync ^2.2.28.3
-- c3 ^0.7.20
-- chart.js ^4.2.1
-- d3 ^7.8.0
-- d3-selection-multi ^1.0.1
-- gulp ^4.0.2
-- gulp-sass ^5.1.0
-- jsdoc-typeof-plugin ^1.0.0
-- tailwindcss ^3.2.4
-- typescript ^4.9.4
-- react ^18.2.0
-  - react-dom ^18.2.0
-  - react-router-dom ^6.6.2
-  - react-scripts ^5.0.1
-- sass ^1.58.3
-- web-vitals ^3.1.0
+| Package                                | Version        |
+| ---                                    | ---            |
+| [axios][axios-link]                    | [^1.3.4](https://www.npmjs.com/package/axios/v/1.3.4) |
+| [bootstrap][bootstrap-link]            | [^5.2.3](https://www.npmjs.com/package/bootstrap/v/5.3.4) |
+| [browser-sync][browsync-link]          | ^2.2.28.3 |
+| [c3][c3-link]                          | [^0.7.20](https://www.npmjs.com/package/c3/v/0.7.20) |
+| [chart.js][chart-link]                 | [.js ^4.2.1](https://www.npmjs.com/package/chart.js/v/4.2.1) |
+| [d3][d3-link]                          | [^7.8.0](https://www.npmjs.com/package/d3/v/7.8.0) |
+| [d3-selection-multi][d3-select-link]   | [^1.0.1](https://www.npmjs.com/package/d3-selection-multi/v/1.0.1) |
+| [gulp][gulp-link]                      | [^4.0.2](https://www.npmjs.com/package/gulp/v/4.0.2) |
+| [gulp-sass][gulp-sass-link]            | [^5.1.0](https://www.npmjs.com/package/gulp-sass/v/5.1.0) |
+| [jsdoc-typeof-plugin][jsdoc-type-link] | [^1.0.0](https://www.npmjs.com/package/jsdoc-typeof-plugin/v/1.0.0) |
+| [tailwindcss][tailwind-link]           | [^3.2.4](https://www.npmjs.com/package/tailwindcss/v/3.2.4) |
+| [typescript][typescript-link]          | [^4.9.4](https://www.npmjs.com/package/typescript/v/4.9.4) |
+| [react][react-link]                    | [^18.2.0](https://www.npmjs.com/package/react/v/18.2.0) |
+| [react-dom][react-dom-link]            | [^18.2.0](https://www.npmjs.com/package/react-dom/v/18.2.0) |
+| [react-router-dom][react-router-link]  | [^6.6.2](https://www.npmjs.com/package/react-router-dom/v/6.6.2) |
+| [react-scripts][react-scripts-link]    | [^5.0.1](https://www.npmjs.com/package/react-scripts/v/5.0.1) |
+| [sass][sass-link]                      | [^1.58.3](https://www.npmjs.com/package/sass/v/1.58.3) |
+| [web-vitals][web-vitals-link]          | [^3.1.0](https://www.npmjs.com/package/web-vitals/v/3.1.0) |
 
-### LAMP packages
+[axios-link]: https://axios-http.com/
+[bootstrap-link]: https://getbootstrap.com/
+[browsync-link]: https://browsersync.io/
+[c3-link]: https://github.com/c3js/c3#readme
+[chart-link]: https://www.chartjs.org/
+[d3-link]: https://d3js.org/
+[d3-select-link]:https://github.com/d3/d3-selection-multi 
+[gulp-link]: https://gulpjs.com/
+[gulp-sass-link]: https://github.com/dlmanning/gulp-sass#readme
+[jsdoc-type-link]: https://www.npmjs.com/package/jsdoc-typeof-plugin
+[tailwind-link]: https://tailwindcss.com/
+[typescript-link]: https://www.typescriptlang.org/
+[react-link]: https://reactjs.org/
+[react-dom-link]: https://reactjs.org/
+[react-router-link]: https://reactrouter.com/
+[react-scripts-link]: https://github.com/facebook/create-react-app#readme
+[sass-link]: https://sass-lang.com/
+[web-vitals-link]: https://github.com/GoogleChrome/web-vitals#readme
 
-- Apache
-  - mod_wsgi
-- PHP v.8.1.32
-- MariaDB 10.5.29 (compatible with MySQL 15.1)
+### LAMP software
+
+| Package                 | Version  |
+| ---                     | ---      |
+| [Apache][apache-link]   | -        |
+| [mod_wsgi][wsgi-link]   | -        |
+| [PHP][php-link]         | v.8.1.32 |
+| [MariaDB][mariadb-link] | 10.5.29 (compatible with MySQL 15.1) |
+
+[apache-link]: https://httpd.apache.org/
+[wsgi-link]: https://modwsgi.readthedocs.io/en/master/
+[php-link]: https://www.php.net/
+[mariadb-link]: https://mariadb.org/
 
 ### GitHub Actions
 
