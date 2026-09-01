@@ -158,11 +158,13 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 
 | Package                 | Version  |
 | ---                     | ---      |
+| [Ubuntu][apache-link]   | 24.04.*  |
 | [Apache][apache-link]   | -        |
 | [mod_wsgi][wsgi-link]   | -        |
 | [PHP][php-link]         | v.8.1.32 |
 | [MariaDB][mariadb-link] | 10.5.29 (compatible with MySQL 15.1) |
 
+[ubuntu-link]: https://releases.ubuntu.com/noble/
 [apache-link]: https://httpd.apache.org/
 [wsgi-link]: https://modwsgi.readthedocs.io/en/master/
 [php-link]: https://www.php.net/
