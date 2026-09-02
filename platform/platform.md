@@ -172,16 +172,19 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 
 ### GitHub Actions
 
-| Package                                        | Version                                 |
-| ---                                            | ---                                     |
-| [actions/checkout][checkout-link]              | [v7.0](https://github.com/actions/checkout/releases/tag/v7.0.1) |
-| [actions/cache/save][cache-save-link]          | [v6.1](https://github.com/actions/cache/releases/tag/v6.1.0) |
-| [actions/cache/restore][cache-restore-link]    | [v6.1](https://github.com/actions/cache/releases/tag/v6.1.0) |
-| [actions/upload-artifact][upload-link]         | [v7.0](https://github.com/actions/upload-artifact/releases/tag/v7.0.1) |
-| [actions/setup-node][setup-node-link]          | [v7.0](https://github.com/actions/setup-node/releases/tag/v7.0.0) |
-| [actions/setup-python][setup-py-link]          | [v7.0](https://github.com/actions/setup-python/releases/tag/v7.0.0) |
-| [burnett01/rsync-deployments][rsync-link]      | [v9](https://github.com/Burnett01/rsync-deployments/releases/tag/v9) |
-| [google-github-actions/auth][google-auth-link] | [v3](https://github.com/google-github-actions/auth/releases/tag/v3) |
+| Package                                          | Version                                 |
+| ---                                              | ---                                     |
+| [actions/checkout][checkout-link]                | [v7.0](https://github.com/actions/checkout/releases/tag/v7.0.1) |
+| [actions/cache/save][cache-save-link]            | [v6.1](https://github.com/actions/cache/releases/tag/v6.1.0) |
+| [actions/cache/restore][cache-restore-link]      | [v6.1](https://github.com/actions/cache/releases/tag/v6.1.0) |
+| [actions/upload-artifact][upload-link]           | [v7.0](https://github.com/actions/upload-artifact/releases/tag/v7.0.1) |
+| [actions/setup-node][setup-node-link]            | [v7.0](https://github.com/actions/setup-node/releases/tag/v7.0.0) |
+| [actions/setup-python][setup-py-link]            | [v7.0](https://github.com/actions/setup-python/releases/tag/v7.0.0) |
+| [burnett01/rsync-deployments][rsync-link]        | [v9](https://github.com/Burnett01/rsync-deployments/releases/tag/v9) |
+| [docker/setup-buildx-action][docker-buildx-link] | [v4.3.0](https://github.com/docker/setup-buildx-action/releases/tag/v4.3.0) |
+| [docker/login-action][docker-login-link]         | [v4.6.0](https://github.com/docker/login-action/releases/tag/v4.6.0) |
+| [docker/build-push-action][docker-push-link]     | [v7.3.0](https://github.com/docker/build-push-action/releases/tag/v7.3.0) |
+| [google-github-actions/auth][google-auth-link]   | [v3](https://github.com/google-github-actions/auth/releases/tag/v3) |
 
 [checkout-link]: https://github.com/actions/checkout
 [cache-save-link]: https://github.com/actions/cache/
@@ -190,6 +193,9 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 [setup-node-link]: https://github.com/actions/setup-node
 [setup-py-link]: https://github.com/actions/setup-python
 [rsync-link]: https://github.com/burnett01/rsync-deployments
+[docker-buildx-link]: https://github.com/docker/setup-buildx-action
+[docker-login-link]: https://github.com/docker/login-action
+[docker-push-link]: https://github.com/docker/build-push-action
 [google-auth-link]: https://github.com/google-github-actions/auth
 
 ## OpenGameData Tools & Libraries - Platform Compatibility
