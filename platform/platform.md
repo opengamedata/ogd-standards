@@ -174,12 +174,12 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 
 | Package                                          | Version                                 |
 | ---                                              | ---                                     |
-| [actions/checkout][checkout-link]                | [v7.0](https://github.com/actions/checkout/releases/tag/v7.0.1) |
-| [actions/cache/save][cache-save-link]            | [v6.1](https://github.com/actions/cache/releases/tag/v6.1.0) |
-| [actions/cache/restore][cache-restore-link]      | [v6.1](https://github.com/actions/cache/releases/tag/v6.1.0) |
-| [actions/upload-artifact][upload-link]           | [v7.0](https://github.com/actions/upload-artifact/releases/tag/v7.0.1) |
-| [actions/setup-node][setup-node-link]            | [v7.0](https://github.com/actions/setup-node/releases/tag/v7.0.0) |
-| [actions/setup-python][setup-py-link]            | [v7.0](https://github.com/actions/setup-python/releases/tag/v7.0.0) |
+| [actions/checkout][checkout-link]                | [v7.0.1](https://github.com/actions/checkout/releases/tag/v7.0.1) |
+| [actions/cache/save][cache-save-link]            | [v6.1.0](https://github.com/actions/cache/releases/tag/v6.1.0) |
+| [actions/cache/restore][cache-restore-link]      | [v6.1.0](https://github.com/actions/cache/releases/tag/v6.1.0) |
+| [actions/upload-artifact][upload-link]           | [v7.0.1](https://github.com/actions/upload-artifact/releases/tag/v7.0.1) |
+| [actions/setup-node][setup-node-link]            | [v7.0.0](https://github.com/actions/setup-node/releases/tag/v7.0.0) |
+| [actions/setup-python][setup-py-link]            | [v7.0.0](https://github.com/actions/setup-python/releases/tag/v7.0.0) |
 | [burnett01/rsync-deployments][rsync-link]        | [v9](https://github.com/Burnett01/rsync-deployments/releases/tag/v9) |
 | [docker/setup-buildx-action][docker-buildx-link] | [v4.3.0](https://github.com/docker/setup-buildx-action/releases/tag/v4.3.0) |
 | [docker/login-action][docker-login-link]         | [v4.6.0](https://github.com/docker/login-action/releases/tag/v4.6.0) |
