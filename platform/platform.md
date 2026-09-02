@@ -198,7 +198,7 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 [docker-login-link]: https://github.com/docker/login-action
 [docker-push-link]: https://github.com/docker/build-push-action
 [google-auth-link]: https://github.com/google-github-actions/auth
-[google-deploy-cloudrun-link]: https://github.com/google-github-actions/deploy-cloudrun
+[google-deploy-link]: https://github.com/google-github-actions/deploy-cloudrun
 
 ## OpenGameData Tools & Libraries - Platform Compatibility
 
