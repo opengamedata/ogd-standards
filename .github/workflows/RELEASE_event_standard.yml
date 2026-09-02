@@ -11,7 +11,7 @@ env:
 jobs:
   generate_pdf:
     name: Generate Event Standard PDF
-    if: startsWith(${{ github.event.release.tag_name }}, "events-")
+    if: startsWith(github.event.release.tag_name, "events-")
     runs-on: ubuntu-latest
     container: pandoc/latex:3.10-ubuntu
     steps:
