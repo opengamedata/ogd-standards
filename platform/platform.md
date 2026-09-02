@@ -186,6 +186,7 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 | [docker/build-push-action][docker-push-link]     | [v7.3.0](https://github.com/docker/build-push-action/releases/tag/v7.3.0) |
 | [google-github-actions/auth][google-auth-link]   | [v3.0.0](https://github.com/google-github-actions/auth/releases/tag/v3.0.0) |
 | [google-github-actions/deploy-cloudrun][google-deploy-link]   | [v3.0.1](https://github.com/google-github-actions/deploy-cloudrun/releases/tag/v3.0.1) |
+| [dataaxiom/ghcr-cleanup-action][ghcr-clean-link] | [v1.2.2](https://github.com/dataaxiom/ghcr-cleanup-action/releases/tag/v1.2.2) |
 
 [checkout-link]: https://github.com/actions/checkout
 [cache-save-link]: https://github.com/actions/cache/
@@ -199,6 +200,7 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 [docker-push-link]: https://github.com/docker/build-push-action
 [google-auth-link]: https://github.com/google-github-actions/auth
 [google-deploy-link]: https://github.com/google-github-actions/deploy-cloudrun
+[ghcr-clean-link]: https://github.com/dataaxiom/ghcr-cleanup-action
 
 ## OpenGameData Tools & Libraries - Platform Compatibility
 
