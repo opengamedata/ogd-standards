@@ -184,7 +184,7 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 | [docker/setup-buildx-action][docker-buildx-link] | [v4.3.0](https://github.com/docker/setup-buildx-action/releases/tag/v4.3.0) |
 | [docker/login-action][docker-login-link]         | [v4.6.0](https://github.com/docker/login-action/releases/tag/v4.6.0) |
 | [docker/build-push-action][docker-push-link]     | [v7.3.0](https://github.com/docker/build-push-action/releases/tag/v7.3.0) |
-| [google-github-actions/auth][google-auth-link]   | [v3](https://github.com/google-github-actions/auth/releases/tag/v3) |
+| [google-github-actions/auth][google-auth-link]   | [v3.0.0](https://github.com/google-github-actions/auth/releases/tag/v3.0.0) |
 | [google-github-actions/deploy-cloudrun][google-deploy-link]   | [v3.0.1](https://github.com/google-github-actions/deploy-cloudrun/releases/tag/v3.0.1) |
 
 [checkout-link]: https://github.com/actions/checkout
