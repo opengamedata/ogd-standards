@@ -1,2 +1,3 @@
-# ogd-platform
-A base web platform for creating and managing game projects within the Open Game Data tools ecosystem.
+# ogd-standards
+
+Official documentation of the OpenGameData logging standards and software reference platform.
