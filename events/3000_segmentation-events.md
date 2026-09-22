@@ -10,7 +10,8 @@ Segmentation events describe structural boundaries and location in the game, not
 | 3100–3199 | Exclusive Topological Segments | Ordered, mutually exclusive segments (e.g., levels) |
 | 3200–3299 | Non-Exclusive Segments | Overlapping segments (e.g., quests, objectives) |
 | 3300–3399 | Spatial Regions | Location-based regions/areas in the game world |
-| 3400–3999 | Reserved | Reserved for future segmentation families |
+| 3400–3899 | Reserved | Reserved for future segmentation families |
+| 3900–3999 | Custom | Game-specific custom events |
 
 Verb mapping (ones place) used consistently across segmentation families:
 

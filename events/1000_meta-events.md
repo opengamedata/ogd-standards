@@ -13,6 +13,8 @@ Meta-Events describe the container around gameplay, not actions within the game 
 | 1400–1499  | Profile & Identity                | Player identity management |
 | 1500–1599  | Loading & Application Transitions | Application readiness and transitions |
 | 1600–1699  | Matchmaking                       | Player participation in matchmaking processes used to form gameplay sessions. |
+| 1700–1899  | Reserved                          | Reserved for future meta-event families |
+| 1900–1999  | Custom                            | Game-specific custom events |
 
 ### Application Lifecycle (1000–1099)
 

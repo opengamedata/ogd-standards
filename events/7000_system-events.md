@@ -14,7 +14,8 @@ System Action events do not represent player intentions, analytic calculations, 
 | 7400–7499  | Information & Visibility | Changes to player-visible information |
 | 7500–7599  | In-Game Interface State | System-driven presentation or interactivity of gameplay interface elements |
 | 7600-7699  | System Signaling | System-generated cues that signal gameplay-relevant states or conditions to the player |
-| 7700–7999  | Reserved | Reserved for future system action families |
+| 7700–7899  | Reserved | Reserved for future system action families |
+| 7900–7999  | Custom | Game-specific custom events |
 
 ### Entity & Resource Changes (7100–7199)
 

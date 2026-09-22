@@ -33,9 +33,11 @@ Events in this schema are recorded from the perspective of a focal player. The e
 
 Actions performed by the focal player are recorded as Player Action events (4000s).
 
-Actions performed by the game system are recorded as System Action events (5000s).
+Actions performed by other human players are recorded as Other Human Player Action events (5000s).
 
-Actions performed by other actors with agency, such as other players or NPCs, are recorded as Other Actor Action events (6000s).
+Actions performed by system-controlled actors, such as NPCs, are recorded as System-Controlled Actor Action events (6000s).
+
+Actions performed by the game system are recorded as System Action events (7000s).
 
 This perspective ensures that event records consistently capture the interaction between the focal player, the game system, and other actors within the game environment.
 
