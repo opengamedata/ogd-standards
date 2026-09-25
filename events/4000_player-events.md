@@ -5,6 +5,7 @@ Player Action events capture intentional, atomic actions performed by the player
 Player Action events describe player intent, not system response, not narrative presentation, and not analytic or evaluative outcomes.
 
 | Code Range | Family | Family Description |
+| ------     | --------------           | ---------------------- |
 | 4000–4099 | Universal Player Actions | Commit or cancel a gameplay response |
 | 4100–4199 | Puzzle / Constructed Response | Manipulate objects to construct or modify a solution |
 | 4200–4299 | Point-and-Click | Select, inspect, or activate objects via direct interaction |
@@ -13,7 +14,8 @@ Player Action events describe player intent, not system response, not narrative 
 | 4500–4599 | Resource Management | Acquire, allocate, consume, or convert resources |
 | 4600–4699 | Simulation | Configure or query simulation parameters |
 | 4700–4799 | Interface / Structural Navigation | Navigate in-game structure or in-game interfaces |
-| 4800–4999 | Reserved | Reserved for future player action families |
+| 4800–4899 | Reserved | Reserved for future player action families |
+| 4900–4999 | Custom | Game-specific custom events |
 
 ### Universal Player Actions (4000–4099)
 

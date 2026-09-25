@@ -1,6 +1,6 @@
 ## Narrative & Communication Events (2000–2999)
 
-N**arrative & Communication events capture how the game presents information, story, instruction, and feedback to the player.** These events represent player-visible communication such as narration, dialog, tutorials, feedback, and hints, regardless of whether the interaction is interactive or non-interactive.
+**Narrative & Communication events capture how the game presents information, story, instruction, and feedback to the player.** These events represent player-visible communication such as narration, dialog, tutorials, feedback, and hints, regardless of whether the interaction is interactive or non-interactive.
 
 Narrative & Communication events describe what is communicated and how it progresses, not the gameplay consequences of that communication and not analytic interpretation of player understanding.
 
@@ -12,7 +12,8 @@ Narrative & Communication events describe what is communicated and how it progre
 | 2300–2399  | Positive Feedback | Affirmative feedback in response to correct action |
 | 2400–2499  | Negative Feedback | Corrective feedback in response to incorrect action |
 | 2500–2599  | Hinting           | System- or player-initiated hints/help |
-| 2600–2999  | Reserved          | Reserved for future narrative/communication families |
+| 2600–2899  | Reserved          | Reserved for future narrative/communication families |
+| 2900–2999  | Custom            | Game-specific custom events |
 
 ### Narration (2000–2099)
 

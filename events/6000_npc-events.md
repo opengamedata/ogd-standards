@@ -6,9 +6,9 @@ System-Controlled Actor Actions represent intentional actions performed by non-f
 
 These events mirror the structure of Player Actions but indicate that the acting entity is a non-focal computer-controlled actor rather than the focal player or another human player.
 
-System-Controlled Actor Action events should be used when an in-game actor performs an action. They should not be used for non-agentic world changes, environmental updates, or broader system state changes; those remain System Action events (6000s).
+System-Controlled Actor Action events should be used when an in-game actor performs an action. They should not be used for non-agentic world changes, environmental updates, or broader system state changes; those remain System Action events (7000s).
 
-| Event Code | Event Name               | Description |
+| Code Range | Family                   | Family Description |
 | ------     | --------------           | ---------------------- |
 | 6100–6199  | Puzzle / Constructed Response | Object manipulation actions performed by computer-controlled actors |
 | 6200–6299  | Point-and-Click          | Selection and activation actions performed by computer-controlled actors |
@@ -17,4 +17,5 @@ System-Controlled Actor Action events should be used when an in-game actor perfo
 | 6500–6599  | Resource Management      | Resource acquisition or consumption by computer-controlled actors |
 | 6600–6699  | Simulation               | Simulation configuration actions by computer-controlled actors |
 | 6700–6799  | Interface / Structural Navigation | Navigation through game structure by computer-controlled actors |
-| 6800–6999  | Reserved                 | Reserved for future computer-controlled actor action families |
+| 6800–6899  | Reserved                 | Reserved for future computer-controlled actor action families |
+| 6900–6999  | Custom                   | Game-specific custom events |

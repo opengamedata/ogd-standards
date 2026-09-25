@@ -15,4 +15,5 @@ These events mirror the structure of Player Actions but indicate that the acting
 | 5500–5599  | Resource Management | Resource acquisition or consumption by other actors |
 | 5600–5699  | Simulation | Simulation configuration actions by other actors |
 | 5700–5799  | Interface / Structural Navigation | Navigation through game structure by other actors |
-| 5800–5999  | Reserved | Reserved for future other actor action families |
+| 5800–5899  | Reserved | Reserved for future other actor action families |
+| 5900–5999  | Custom | Game-specific custom events |
