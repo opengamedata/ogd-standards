@@ -24,18 +24,20 @@
 | authoritative_timestamp | Sequencing      | compound  | datetime  | “Time”    | null                    |
 | game_time               | Sequencing      | compound  | timedelta | “Time”    | null                    |
 | session_sequence_index  | Sequencing      | simple    | int       | No        | (inferred from gametime sort order) |
-| game_segment            | Segmenting      | compound? | JSON?     | No        | null? { }?              |
+| game_segment            | Segmenting      | compound  | JSON      | No        | { }                     |
 | event_source            | Provenance      | simple    | string    | No        | “Game”                  |
 | source_version          | Versioning      | simple    | SemVer    | Yes       |                         |
 | game_version            | Versioning      | simple    | SemVer    | No        | source_version          |
 | schema_version          | Versioning      | simple    | SemVer    | Yes       |                         |
 | log_version             | Versioning      | simple    | SemVer    | Yes       |                         |
-| condition               | Configuration   | compound? | JSON?     | No        | null                    |
+| condition               | Configuration   | compound  | JSON      | No        | null                    |
 | game_configuration      | Configuration   | compound  | JSON      | No        | { }                     |
 | platform                | Configuration   | compound  | JSON      | No        | { }                     |
 | game_state              | Context         | compound  | JSON      | No        | { }                     |
 | player_history          | Context         | compound  | JSON      | No        | { }                     |
 | event_id                | Event           | simple    | int       | Yes       |                         |
-| event_name              | Event           | simple    | string    | No?       | null?                   |
+| event_name              | Event           | simple    | string    | No        | null                    |
 | event_data              | Event           | compound  | JSON      | Yes       |                         |
-| private_metadata        | Private Context | compound? | JSON? / string matching id? | No | { }? null?   |
+| private_metadata        | Private Context | compound  | JSON      | No        | { }                     |
+
+An event_id of 0000 marks an event logged without an event code, such as one from a game that logs by name only. Those events require an event_name, since it is the only thing that identifies their type.
