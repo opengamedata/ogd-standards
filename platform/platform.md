@@ -161,7 +161,7 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 | [Ubuntu][apache-link]   | 24.04.*  |
 | [Apache][apache-link]   | -        |
 | [mod_wsgi][wsgi-link]   | -        |
-| [PHP][php-link]         | v.8.1.32 |
+| [PHP][php-link]         | v.8.5.11 |
 | [MariaDB][mariadb-link] | 10.5.29 (compatible with MySQL 15.1) |
 
 [ubuntu-link]: https://releases.ubuntu.com/noble/
