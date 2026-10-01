@@ -1,4 +1,4 @@
-"""Generates generated/OGDEvents.cs and generated/OGDEvents.js from the event code tables in events/.
+"""Generates OGDEvents.cs, OGDEvents.js and ogd_events.gd in generated/ from the event code tables in events/.
 
 Run from the repo root: python scripts/generate_event_codes.py
 """
@@ -32,6 +32,17 @@ FAMILY_HEADING   : re.Pattern = re.compile(r"^### (.+?) \((\d{4})[–-](\d{4})\)
 CODE             : re.Pattern = re.compile(r"\d{4}")
 RANGE            : re.Pattern = re.compile(r"(\d{4})\s*[–-]\s*(\d{4})")
 SEPARATOR        : re.Pattern = re.compile(r":?-+:?")
+
+
+def _toConstant(name:str) -> str:
+    """Turns a PascalCase identifier into CONSTANT_CASE.
+
+    :param name: The identifier, e.g. "PointAndClick".
+    :type name: str
+    :return: The constant name, e.g. "POINT_AND_CLICK".
+    :rtype: str
+    """
+    return re.sub(r"(?<=[a-z])(?=[A-Z0-9])|(?<=[0-9])(?=[A-Z][a-z])|(?<=[A-Z])(?=[A-Z][a-z])", "_", name).upper()
 
 
 def _toPascal(text:str) -> str:
@@ -169,6 +180,10 @@ def _checkCategories(categories:List[Dict[str, Any]]) -> None:
                 assert e['code'] not in seen, f"duplicate code {e['code']}"
                 assert e['name'] and not e['name'][0].isdigit() and e['name'] != f['name'], f"bad name for {e['code']}"
                 seen.add(e['code'])
+        constants : List[str] = [_toConstant(f['name']) + "_" + _toConstant(e['name'])
+                                 for f in c['families'] for e in f['events']]
+        clashes : List[str] = [name for name in constants if constants.count(name) > 1]
+        assert not clashes, f"duplicate GDScript constant {clashes[0]} in {c['name']}"
 
 
 def _toCSharp(categories:List[Dict[str, Any]]) -> str:
@@ -218,12 +233,36 @@ def _toJavaScript(categories:List[Dict[str, Any]]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def _toGDScript(categories:List[Dict[str, Any]]) -> str:
+    """Formats each category as an enum, with one constant per event named after its family and event.
+
+    GDScript inner classes would clash with any class in a game that has the same name, so these are enums.
+
+    :param categories: The checked categories.
+    :type categories: List[Dict[str, Any]]
+    :return: The contents of ogd_events.gd.
+    :rtype: str
+    """
+    _doc = lambda s: s.replace("[", "[lb]")
+    lines : List[str] = [f"# {h}" for h in HEADER] + ["# gdlint:disable=max-line-length", "class_name OGDEvents"]
+    lines += [f"## {s}" for s in SUMMARY]
+    for c in categories:
+        lines += ["", f"enum {c['name']} {{"]
+        for f in c['families']:
+            for e in f['events']:
+                lines += [f"\t## {_doc(e['description'])}".rstrip(),
+                          f"\t{_toConstant(f['name'])}_{_toConstant(e['name'])} = {e['code']},"]
+        lines.append("}")
+    return "\n".join(lines) + "\n"
+
+
 def Main() -> None:
-    """Regenerates both files in generated/."""
+    """Regenerates the files in generated/."""
     categories : List[Dict[str, Any]] = _loadCategories()
     OUT.mkdir(exist_ok=True)
     (OUT / "OGDEvents.cs").write_text(_toCSharp(categories), encoding="utf-8", newline="\n")
     (OUT / "OGDEvents.js").write_text(_toJavaScript(categories), encoding="utf-8", newline="\n")
+    (OUT / "ogd_events.gd").write_text(_toGDScript(categories), encoding="utf-8", newline="\n")
     total : int = sum(len(f['events']) for c in categories for f in c['families'])
     print(f"Wrote {total} event codes to {OUT.relative_to(ROOT)}/")
 
