@@ -79,12 +79,14 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 | Package                                     | Version                                 |
 | ---                                         | ---                                     |
 | [build][build-link]                         | [1.2.*](https://pypi.org/project/build/1.2.2.post1/) |
+| [gdtoolkit][gdtoolkit-link]                 | [4.5.*](https://pypi.org/project/gdtoolkit/4.5.0/) |
 | [setuptools][setup-link]                    | [74.1.*](https://pypi.org/project/setuptools/74.1.3/) |
 | [setuptools-git-versioning][setup-git-link] | [2.0.*](https://pypi.org/project/setuptools-git-versioning/2.0.0/) |
 | [twine][twine-link]                         | [5.1.1](https://pypi.org/project/twine/5.1.1/) |
 | [wheel][wheel-link]                         | [0.44.*](https://pypi.org/project/wheel/0.44.0/) |
 
 [build-link]: https://pypi.org/project/build/
+[gdtoolkit-link]: https://pypi.org/project/gdtoolkit/
 [setup-link]: https://setuptools.pypa.io/en/latest/
 [setup-git-link]: https://pypi.org/project/setuptools-git-versioning/
 [twine-link]: https://pypi.org/project/twine/
@@ -180,6 +182,7 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 | [actions/upload-artifact][upload-link]                      | [v7.0.1](https://github.com/actions/upload-artifact/releases/tag/v7.0.1) |
 | [actions/setup-node][setup-node-link]                       | [v7.0.0](https://github.com/actions/setup-node/releases/tag/v7.0.0) |
 | [actions/setup-python][setup-py-link]                       | [v7.0.0](https://github.com/actions/setup-python/releases/tag/v7.0.0) |
+| [chickensoft-games/setup-godot][setup-godot-link]           | [v2.4.2](https://github.com/chickensoft-games/setup-godot/releases/tag/v2.4.2) |
 | [burnett01/rsync-deployments][rsync-link]                   | [v9](https://github.com/Burnett01/rsync-deployments/releases/tag/v9) |
 | [docker/setup-buildx-action][docker-buildx-link]            | [v4.3.0](https://github.com/docker/setup-buildx-action/releases/tag/v4.3.0) |
 | [docker/login-action][docker-login-link]                    | [v4.6.0](https://github.com/docker/login-action/releases/tag/v4.6.0) |
@@ -194,6 +197,7 @@ Note: for some libraries, we use .* to indicate any patch version may be used (w
 [upload-link]: https://github.com/actions/upload-artifact
 [setup-node-link]: https://github.com/actions/setup-node
 [setup-py-link]: https://github.com/actions/setup-python
+[setup-godot-link]: https://github.com/chickensoft-games/setup-godot
 [rsync-link]: https://github.com/burnett01/rsync-deployments
 [docker-buildx-link]: https://github.com/docker/setup-buildx-action
 [docker-login-link]: https://github.com/docker/login-action
