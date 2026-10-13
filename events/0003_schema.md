@@ -40,4 +40,4 @@
 | event_data              | Event           | compound  | JSON      | Yes       |                         |
 | private_metadata        | Private Context | compound  | JSON      | No        | { }                     |
 
-An event_id of 0000 marks an event logged without an event code, such as one from a game that logs by name only. Those events require an event_name, since it is the only thing that identifies their type.
+An event_id of 9999 marks an event logged without an event code, such as one from a game that logs by name only. Those events require an event_name, since it is the only thing that identifies their type.
