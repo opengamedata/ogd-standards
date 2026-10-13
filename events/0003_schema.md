@@ -30,7 +30,7 @@
 | game_version            | Versioning      | simple    | SemVer    | No        | source_version          |
 | schema_version          | Versioning      | simple    | SemVer    | Yes       |                         |
 | log_version             | Versioning      | simple    | SemVer    | Yes       |                         |
-| condition               | Configuration   | single    | string    | No        | null                    |
+| condition               | Configuration   | simple    | string    | No        | null                    |
 | game_configuration      | Configuration   | compound  | JSON      | No        | { }                     |
 | platform                | Configuration   | compound  | JSON      | No        | { }                     |
 | game_state              | Context         | compound  | JSON      | No        | { }                     |
