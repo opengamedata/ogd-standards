@@ -14,30 +14,31 @@
 
 ### Table of Proposed Parameters
 
-| Name                    | Category        | Col. type | Data Type | Required* | Default                 |
-| ----------------------- | --------------- | --------- | --------- | --------- | ----------------------- |
-| game_id                 | Identification  | simple    | string    | Yes       |                         |
-| instance_id             | Identification  | simple    | string    | No        | session_id              |
-| player_id               | Identification  | simple    | string    | No        | session_id              |
-| session_id              | Identification  | simple    | string    | Yes       |                         |
-| timestamp               | Sequencing      | compound  | datetime  | “Time”    | authoritative_timestamp |
-| authoritative_timestamp | Sequencing      | compound  | datetime  | “Time”    | null                    |
-| game_time               | Sequencing      | compound  | timedelta | “Time”    | null                    |
-| session_sequence_index  | Sequencing      | simple    | int       | No        | (inferred from `game_time` sort order) |
-| game_segment            | Segmenting      | compound  | JSON      | No        | { }                     |
-| event_source            | Provenance      | simple    | string    | No        | “Game”                  |
-| source_version          | Versioning      | simple    | SemVer    | Yes       |                         |
-| game_version            | Versioning      | simple    | SemVer    | No        | source_version          |
-| schema_version          | Versioning      | simple    | SemVer    | Yes       |                         |
-| log_version             | Versioning      | simple    | SemVer    | Yes       |                         |
-| condition               | Configuration   | simple    | string    | No        | null                    |
-| game_configuration      | Configuration   | compound  | JSON      | No        | { }                     |
-| platform                | Configuration   | compound  | JSON      | No        | { }                     |
-| game_state              | Context         | compound  | JSON      | No        | { }                     |
-| player_history          | Context         | compound  | JSON      | No        | { }                     |
-| event_id                | Event           | simple    | int       | Yes       |                         |
-| event_name              | Event           | simple    | string    | No        | (inferred from `event_code`) |
-| event_data              | Event           | compound  | JSON      | Yes       |                         |
-| private_metadata        | Private Context | compound  | JSON      | No        | { }                     |
+| Name                    | Category        | Col. type | Data Type | Required | Guaranteed | Default        |
+| ----------------------- | --------------- | --------- | --------- | -------- | ---------- | ---------------|
+| game_id                 | Identification  | simple    | string    | Yes      | Yes        | -              |
+| instance_id             | Identification  | simple    | string    | No       | Yes        | session_id     |
+| player_id               | Identification  | simple    | string    | No       | Yes        | session_id     |
+| session_id              | Identification  | simple    | string    | Yes      | Yes        | -              |
+| timestamp               | Sequencing      | compound  | datetime  | Yes      | Yes        | -              |
+| authoritative_timestamp | Sequencing      | compound  | datetime  | No       | No         | null           |
+| game_time               | Sequencing      | compound  | timedelta | No[^1]   | No         | null           |
+| session_sequence_index  | Sequencing      | simple    | int       | No[^1]   | Yes        | (inferred from `game_time` sort order) |
+| game_segment            | Segmenting      | compound  | JSON      | No       | No         | { }            |
+| event_source            | Provenance      | simple    | string    | No       | Yes        | "Game"         |
+| source_version          | Versioning      | simple    | SemVer    | Yes      | Yes        | -              |
+| game_version            | Versioning      | simple    | SemVer    | No       | Yes        | source_version |
+| schema_version          | Versioning      | simple    | SemVer    | Yes      | Yes        | -              |
+| log_version             | Versioning      | simple    | SemVer    | Yes      | Yes        | -              |
+| condition               | Configuration   | simple    | string    | No       | No         | null           |
+| game_configuration      | Configuration   | compound  | JSON      | No       | No         | { }            |
+| platform                | Configuration   | compound  | JSON      | No       | No         | { }            |
+| game_state              | Context         | compound  | JSON      | No       | No         | { }            |
+| player_history          | Context         | compound  | JSON      | No       | No         | { }            |
+| event_id                | Event           | simple    | int       | No[^2]   | Yes        | 9999           |
+| event_name              | Event           | simple    | string    | No[^2]   | Yes        | (inferred from `event_id`) |
+| event_data              | Event           | compound  | JSON      | Yes      | Yes        | -              |
+| private_metadata        | Private Context | compound  | JSON      | No       | No         | { }            |
 
-An `event_id` of 9999 marks an event logged without an event code, such as one from a game that logs by name only. Those events require an `event_name`, since it is the only thing that identifies their type.
+[^1]: One of `game_time` and `session_sequence_index` is required. If `game_time` is given, both fields are guaranteed. If only `session_sequence_index` is given, `game_time` is not guaranteed.
+[^2]: One of `event_id` and `event_name` is required. If only `event_name` is given, an `event_id` of 9999 will be used. This special code marks an event logged without an event id, such as one from a game that logs by name only. If only `event_id` is given, there are two cases: (1) if the `event_id` is reserved in the event standard catalog, the name of the event type will be used. (2) if the `event_id` is not reserved in the catalog, a name based on the base, thousands-level block will be used (e.g. "meta_event" for a non-reserved event in the 1000-level block).
