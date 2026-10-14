@@ -24,7 +24,7 @@ For non-guaranteed elements, the default is an "empty" value such as `null` or a
 ### Table of Proposed Elements
 
 | Name                    | Category        | Col. type | Data Type | Required | Guaranteed | Default        |
-| ----------------------- | --------------- | --------- | --------- | -------- | ---------- | ---------------|
+| ----------------------- | --------------- | --------- | --------- | -------- | ---------- | -------------- |
 | game_id                 | Identification  | simple    | string    | Yes      | Yes        | -              |
 | instance_id             | Identification  | simple    | string    | No       | Yes        | player_id      |
 | player_id               | Identification  | simple    | string    | No       | Yes        | session_id     |
