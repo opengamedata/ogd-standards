@@ -1,4 +1,4 @@
-## Event Categories & Specifications
+## Event Typology: Categories & Specifications
 
 ### A numeric code approach
 
