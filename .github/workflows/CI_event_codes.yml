@@ -1,4 +1,5 @@
-# Workflow to check that the generated event codes match the event standard.
+# Workflow to check that the generated event codes match the event standard, and to tell the logging libraries when
+# they change on main.
 name: OGD Standards - Event Code Check Script
 run-name: ${{ format('{0} - {1}', github.workflow, github.event_name == 'push' && github.event.head_commit.message || github.event.pull_request.title) }}
 on:
@@ -34,3 +35,27 @@ jobs:
           echo "::error::generated/ is out of date. Run 'python scripts/generate_event_codes.py' and commit the result."
           exit 1
         fi
+
+  notify_libraries:
+    name: Tell the logging libraries to sync the event codes
+    needs: check_event_codes
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    env:
+      # needs to write to the libraries' contents to dispatch, and to their actions to enable a workflow
+      GH_TOKEN: ${{ secrets.EVENT_CODE_SYNC_TOKEN }}
+    steps:
+    - name: Send each library an event-codes-updated dispatch
+      # without the token, the libraries still pick up the codes on their daily run
+      if: env.GH_TOKEN != ''
+      run: |
+        status=0
+        for repo in opengamedata-unity opengamedata-js-log opengamedata-godot; do
+          # GitHub turns off a scheduled workflow after 60 days without activity in its repo, and a turned off
+          # workflow ignores the dispatch too
+          if ! gh api --method PUT "repos/opengamedata/$repo/actions/workflows/SYNC_event_codes.yml/enable"; then
+            echo "::warning::Couldn't turn on the event code sync workflow in $repo."
+          fi
+          gh api --method POST "repos/opengamedata/$repo/dispatches" -f event_type=event-codes-updated || status=1
+        done
+        exit $status
