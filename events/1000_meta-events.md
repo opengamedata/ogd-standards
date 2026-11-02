@@ -35,7 +35,7 @@ Sessions represent continuous periods of player activity within the application.
 Session lifecycle events describe this activity boundary and do not represent gameplay actions themselves.
 
 | Event Code | Event Name      | Description                |
-| ---------- | -------------   | -------------------------- |
+| ---------- | --------------  | -------------------------- |
 | 1100       | session started | A gameplay session begins. |
 | 1101       | session paused  | The gameplay session is paused. |
 | 1102       | session resumed | A paused gameplay session resumes. |
