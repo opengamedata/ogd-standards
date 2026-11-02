@@ -58,48 +58,47 @@ Session lifecycle events describe this activity boundary and do not represent ga
 
 **Intent**: Capture changes to application/session configuration outside gameplay.
 
-| Event Code | Event Name              | Description                                 |
-| ---------- | ----------------        | -------------------------                   |
-| 1300 | open settings | The player opens the settings screen. |
-| 1301 | change setting | The player changes a setting value. |
-| 1302 | reset settings | Settings are reset to defaults. |
-| 1303 | close settings | The settings screen is closed. |
+| Event Code | Event Name       | Description                           |
+| ---------- | ---------------- | -------------------------             |
+| 1300       | open settings    | The player opens the settings screen. |
+| 1301       | change setting   | The player changes a setting value.   |
+| 1302       | reset settings   | Settings are reset to defaults.       |
+| 1303       | close settings   | The settings screen is closed.        |
 
 ### Profile & Identity (1400–1499)
 
 **Intent**: Capture profile selection and identity/authentication actions outside gameplay.
 
-| Event Code | Event Name               | Description            |
-| ---------- | --------------           | ---------------------- |
-| 1400 | select profile | A player profile is selected. |
-| 1401 | login | A player logs in. |
-| 1402 | logout | A player logs out. |
-| 1403 | create profile | A new player profile is created. |
-| 1404 | delete profile | A player profile is deleted. |
+| Event Code | Event Name     | Description                      |
+| ---------- | -------------- | ----------------------           |
+| 1400       | select profile | A player profile is selected.    |
+| 1401       | login          | A player logs in.                |
+| 1402       | logout         | A player logs out.               |
+| 1403       | create profile | A new player profile is created. |
+| 1404       | delete profile | A player profile is deleted.     |
 
 ### Loading & Application Transitions (1500–1599)
 
 **Intent**: Capture application readiness states and transitions that occur outside gameplay. Loading and transition events describe internal application states that occur while the application is already running, such as loading assets, preparing gameplay environments, or transitioning between major modes of the application.
 
-| Event Code | Event Name               | Description            |
-| ---------- | --------------           | ---------------------- |
-| 1500 | start loading | Application-level loading begins. |
-| 1501 | loading complete | Application-level loading completes. |
-| 1502 | start application transition | A non-gameplay application transition begins. |
-| 1503 | complete application transition | A non-gameplay application transition completes. |
+| Event Code | Event Name              | Description            |
+| ---------- | --------------          | ---------------------- |
+| 1500       | start loading           | Application-level loading begins. |
+| 1501       | loading complete        | Application-level loading completes. |
+| 1502       | start app transition    | A non-gameplay application transition begins. |
+| 1503       | complete app transition | A non-gameplay application transition completes. |
 
 ### Matchmaking (1600–1699)
 
-**Intent**: Capture player participation in matchmaking processes used to assemble gameplay sessions.
+**Intent**: Capture player participation in matchmaking processes used to assemble shared gameplay instances.
 
 Matchmaking events describe system processes that place players into multiplayer sessions. These events represent entry into matchmaking, waiting or queue states, assignment to matches or lobbies, and exit from matchmaking before gameplay begins.
 Matchmaking events capture how multiplayer sessions are formed but do not represent gameplay actions themselves.
 
-| Event Code | Event Name               | Description            |
-| ---------- | --------------           | ---------------------- |
-| 1600 | enter matchmaking | The player enters a matchmaking process to be placed into a gameplay session. |
-| 1601 | exit matchmaking | The player leaves a matchmaking process before being placed into a session. |
-| 1602 | matchmaking match found | The system identifies a compatible match for the player. |
-| 1603 | matchmaking assignment | The player is assigned to a gameplay session or pre-game lobby. |
-| 1604 | matchmaking timeout | The matchmaking process ends without forming a match. |
-
+| Event Code | Event Name              | Description            |
+| ---------- | --------------          | ---------------------- |
+| 1600       | enter matchmaking       | The player enters a matchmaking process to be placed into a gameplay session. |
+| 1601       | exit matchmaking        | The player leaves a matchmaking process before being placed into a session. |
+| 1602       | matchmaking match found | The system identifies a compatible match for the player. |
+| 1603       | matchmaking assignment  | The player is assigned to a gameplay session or pre-game lobby. |
+| 1604       | matchmaking timeout     | The matchmaking process ends without forming a match. |
