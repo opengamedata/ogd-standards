@@ -2,7 +2,8 @@
 
 **Narrative & Communication events capture how the game presents information, story, instruction, and feedback to the player.** These events represent player-visible communication such as narration, dialog, tutorials, feedback, and hints, regardless of whether the interaction is interactive or non-interactive.
 
-Narrative & Communication events describe what is communicated and how it progresses, not the gameplay consequences of that communication and not analytic interpretation of player understanding.
+Narrative & Communication events describe what is communicated, not the gameplay consequences of the communication.
+Similarly, these events do not convey analytic interpretation of player understanding.
 
 | Code Range | Family            | Family Description |
 | ---------- | ---------------   | ------------------ |
@@ -17,18 +18,18 @@ Narrative & Communication events describe what is communicated and how it progre
 
 ### Narration (2000–2099)
 
-**Intent**: Capture presentation and progression of non-interactive or minimally interactive narration (at most allow skip).
+**Intent**: Capture presentation and progression of non-interactive or minimally-interactive narration (e.g. narration with no player choices except to skip forward).
 
-| Event Code | Event Name               | Description            |
-| ---------- | --------------           | ---------------------- |
-| 2001       | enter narration | Narration sequence becomes available/active. |
-| 2002       | exit narration | Narration sequence is exited and no longer active. |
-| 2003       | abandon narration | Narration ends before completion due to interruption or quit. |
-| 2010       | start narration | Narration begins advancing/playing. |
+| Event Code | Event Name         | Description            |
+| ---------- | --------------     | ---------------------- |
+| 2001       | enter narration    | Narration sequence becomes available/active. |
+| 2002       | exit narration     | Narration sequence is exited and no longer active. |
+| 2003       | abandon narration  | Narration ends before completion due to interruption or quit. |
+| 2010       | start narration    | Narration begins advancing/playing. |
 | 2011       | complete narration | Narration reaches its intended end without skipping/abandoning. |
-| 2012       | clear narration | Narration display is cleared or no longer available. |
-| 2013       | advance narration | Narration advances to the next unit (player or system driven). |
-| 2014       | skip narration | Narration is skipped to the end (or past remaining content). |
+| 2012       | clear narration    | Narration display is cleared or no longer available. |
+| 2013       | advance narration  | Narration advances to the next unit (may be player or system driven). |
+| 2014       | skip narration     | Narration is skipped to the end (or past remaining content). |
 
 ### Dialog (2100–2199)
 
@@ -80,23 +81,23 @@ Narrative & Communication events describe what is communicated and how it progre
 
 **Intent**: Capture corrective/negative feedback sequences presented in response to incorrect player actions.
 
-| Event Code | Event Name               | Description            |
-| ---------- | --------------           | ---------------------- |
-| 2410       | start negative feedback | Negative feedback sequence begins. |
+| Event Code | Event Name                 | Description            |
+| ---------- | --------------             | ---------------------- |
+| 2410       | start negative feedback    | Negative feedback sequence begins. |
 | 2411       | complete negative feedback | Negative feedback sequence completes naturally. |
-| 2412       | clear negative feedback | Negative feedback display is cleared or no longer available. |
-| 2413       | advance negative feedback | Negative feedback advances to the next unit (if multi-part). |
-| 2414       | skip negative feedback | Negative feedback is skipped to the end. |
+| 2412       | clear negative feedback    | Negative feedback display is cleared or no longer available. |
+| 2413       | advance negative feedback  | Negative feedback advances to the next unit (if multi-part). |
+| 2414       | skip negative feedback     | Negative feedback is skipped to the end. |
 
 ### Hinting (2500–2599)
 
 **Intent**: Capture hint/help sequences. Includes player-initiated requests for hints.
 
-| Event Code | Event Name               | Description            |
-| ---------- | --------------           | ---------------------- |
-| 2510       | start hint | Hint/help sequence begins. |
-| 2511       | complete hint | Hint/help sequence completes naturally. |
-| 2512       | clear hint | Hint/help display is cleared or no longer available. |
-| 2513       | advance hint | Hint/help advances to the next unit. |
-| 2514       | skip hint | Hint/help is skipped to the end. |
-| 2515       | request hint | Player requests a hint/help (player-initiated request). |
+| Event Code | Event Name     | Description            |
+| ---------- | -------------- | ---------------------- |
+| 2510       | start hint     | Hint/help sequence begins. |
+| 2511       | complete hint  | Hint/help sequence completes naturally. |
+| 2512       | clear hint     | Hint/help display is cleared or no longer available. |
+| 2513       | advance hint   | Hint/help advances to the next unit. |
+| 2514       | skip hint      | Hint/help is skipped to the end. |
+| 2515       | request hint   | Player requests a hint/help (player-initiated request). |
