@@ -2,6 +2,8 @@
 
 Replay/clickstream events capture hardware-level triggers that are suitable to fully reconstructing player inputs to a game, sufficient to enable in-engine replay of a gameplay session. This category additionally captures randomization seeding and other non-player data necessary to reconstructing a session at the game engine level.
 
+The taxonomy of replay events has not yet been defined within this standard.
+
 | Event Code | Event Name               | Description            |
 | ---------- | --------------           | ---------------------- |
 | 8100-8199  | N/A                      |                        |
