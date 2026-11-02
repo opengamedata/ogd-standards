@@ -103,7 +103,7 @@ Inferring such reasoning is the domain of later analysis.
 
 ### Simulation (4600–4699)
 
-**Intent**: Capture player configuration or interrogation of simulation parameters (not simulation execution).
+**Intent**: Capture player configuration or interrogation of simulation parameters. These events do not capture details of the simulation's execution.
 
 | Event Code | Event Name            | Description            |
 | ---------- | --------------        | ---------------------- |
@@ -118,17 +118,17 @@ Inferring such reasoning is the domain of later analysis.
 
 ### Interface / Structural Navigation (4700–4799)
 
-**Intent**: Capture player intent to navigate the game’s structure or in-game interfaces (not application-level menus).
+**Intent**: Capture player navigation of the game’s in-game interfaces and related structures, but not application-level menus.
 
-| Event Code | Event Name                | Description            |
-| ---------- | --------------            | ---------------------- |
+| Event Code | Event Name                | Description                           |
+| ---------- | --------------            | ----------------------                |
 | 4700       | select segment            | The player selects a segment or subsegment. |
 | 4701       | open interface            | The player opens an in-game interface element. |
 | 4702       | close interface           | The player closes an in-game interface element. |
 | 4703       | navigate to screen        | The player navigates to a different in-game screen. |
 | 4704       | return to previous screen | The player returns to the previous in-game screen. |
 | 4705       | select item               | The player selects an interface item. |
-| 4706       | confirm selection         | The player confirms a selection. |
-| 4707       | cancel selection          | The player cancels a selection. |
-| 4708       | switch view               | The player switches views. |
-| 4709       | toggle overlay            | The player toggles an overlay. |
+| 4706       | confirm selection         | The player confirms a selection.      |
+| 4707       | cancel selection          | The player cancels a selection.       |
+| 4708       | switch view               | The player switches views.            |
+| 4709       | toggle overlay            | The player toggles an overlay.        |

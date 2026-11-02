@@ -1,12 +1,12 @@
 ## System-Controlled Actor Action Events (6000–6999)
 
-System-Controlled Actor Action events capture gameplay actions performed by non-focal actors whose behavior is controlled by the game rather than by a human player. These actors may include NPCs, enemies, companions, creatures, bots, scripted agents, or other autonomous in-game entities with action-selection capability.
+**System-Controlled Actor Action events capture gameplay actions performed by actors within the game whose behavior is controlled by the game rather than by a human player.** These actors may include NPCs, enemies, companions, bots, scripted agents, or other autonomous in-game entities with action-selection capability.
 
-System-Controlled Actor Actions represent intentional actions performed by non-focal game-controlled actors, analogous to Player Action events in the 4000 range.
+System-Controlled Actor Actions represent direct actions performed by non-focal game-controlled actors, analogous to Player Action events in the 4000 range.
 
 These events mirror the structure of Player Actions but indicate that the acting entity is a non-focal computer-controlled actor rather than the focal player or another human player.
 
-System-Controlled Actor Action events should be used when an in-game actor performs an action. They should not be used for non-agentic world changes, environmental updates, or broader system state changes; those remain System Action events (7000s).
+System-Controlled Actor Action events should be used when an in-game actor performs an action. They should not be used for non-agentic world changes, environmental updates, or broader system state changes; those remain System Action events (6000s).
 
 | Code Range | Family                   | Family Description |
 | ---------- | --------------           | ---------------------- |
