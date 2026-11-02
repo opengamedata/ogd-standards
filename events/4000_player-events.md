@@ -88,7 +88,7 @@ Inferring such reasoning is the domain of later analysis.
 
 ### Resource Management (4500–4599)
 
-**Intent**: Capture attempts to acquire, allocate, consume, lose, discard, or convert resources.
+**Intent**: Capture attempts to acquire, allocate, consume, discard, or convert resources.
 
 | Event Code | Event Name        | Description            |
 | ---------- | --------------    | ---------------------- |
