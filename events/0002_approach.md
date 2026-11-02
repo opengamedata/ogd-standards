@@ -1,10 +1,11 @@
 ## Event Logging Approach
 
-### Event Definition
+Our proposed approach to logging game telemetry data begins with the concept of an *event*.
 
-An event is a timestamped record of a concrete occurrence representing a player action, system action, narrative interaction, structural transition, or application/session-level change.
-
+An *event* is a timestamped record of a concrete occurrence in a game, representing a player action, system action, narrative interaction, structural transition, or other application/session-level change.
 Events are discrete and atomic; each event captures a single, well-defined occurrence.
+
+<!-- Through a series of well-defined, well-designed ...
 
 Durational or ongoing states should be represented using state-transition events (e.g., start and end), rather than as continuous conditions.
 
@@ -109,4 +110,4 @@ The ones place identifies the specific event type within the family. In categori
 
 New codes are most commonly introduced at this level. Specific event codes must not redefine or contradict the meaning established by the higher-level components of the code.
 
-Only categories representing multi-step sequences (notably Narrative and Segmentation) use tens-place semantics.
+Only categories representing multi-step sequences (notably Narrative and Segmentation) use tens-place semantics. -->
