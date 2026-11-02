@@ -1,15 +1,37 @@
-## Event Typology: Categories & Specifications
+## Event Catalog: Categories & Specifications
 
-### A numeric code approach
+The remainder of this document is dedicated to a catalog of basic event types.
+We define a hierarchical, conceptual taxonomy of events types that serves to guide the identification of real-world game events with a conceptual type.
+Each type is associated with a numeric code, which can be used to identify semantically-similar events across vastly different games.
+This numeric tagging approach then enables standardized analyses to be applied across games.
 
-* Four-digit codes
-* First digit is a high-level category, e.g. 1000s for meta-events, 2000s for dialog, 3000s for segmentation, etc.
-* On inner digits, often used even numbers for “start”, odd numbers for “end”
-* Lower-value numbers (e.g. 4000, 4001) used for most-broadly-applicable events, e.g. “tick”
-* Reserve one top-level category for fully-custom event space, things that don’t fit into other parts of standard
-* Could benefit from separating different common mechanics, but need more than single digit there
+The taxonomy is flexible by design, with ample numeric codes reserved for custom use in games with novel interactions or game mechanics.
 
-### Summary of Proposed Ranges
+### Numeric code approach
+
+Each event type defined in our taxonomy is assigned a four-digit numeric code, identifying a telemetry event with its type.
+Each of the four digits corresponds to one level of hierarchy in our taxonomy:
+
+* The top level of the hierarchy is grouped primarily by the actor within the game that caused the event to be triggered, such as the "focal" player, an NPC, or the game system. There also exist top-level groups that relate to a particularly prevalent game mechanic or structure, such as dialog and segmentation.
+  * We reserve one top-level category for fully-custom event space, i.e. events that don’t fit into other parts of standard
+* The second level groups by a particular class of game mechanic within the top-level category. For example, "dialog" events are grouped at the second level into narration, "true" dialog with player choices, tutorialization, etc.
+* The third level groups events by a particular "unit" of the interaction or game structure. For example, the Segmentation -> Exclusive Segmentation category uses grouping at the third level to represent hierarchies of segments within a game, such as rounds within a level.
+  * In practice, the third level is not meaningfully utilized in most cases, but is reserved for future expansions of the event catalog.
+* The fourth level represents the event "verb," such as "select", "deselect", "submit", or "cancel." The taxonomy generally follows a few conventions to make identification easier.
+  * Lower-value digits (e.g. xxx0, xxx1) are used for most-broadly-applicable events, e.g. "start," with higher-value digits corresponding to more distinctive verbs.
+  * Even digits are typically used for "start" or other "initiation" events, with the next consecutive odd digit for "end."
+  * The mapping of verbs to digits typically repeats across groups in the 3rd level.
+
+While this is the general convention, it’s important to note that the use and meaning of the lower-level groupings will always depend to a degree on the higher-level grouping(s), and so some exceptions will always exist.
+
+### Top-Level Categories
+
+Some general commitments:
+
+* X900+ is intentionally left blank within each block for custom events
+* 9000+ is intentionally left blank as a fully custom block
+
+### Summary of Top-Level Categories
 
 | Numeric Range | Range Name                | Description                                                                                |
 | --------      | ------------------------- | ------------------------------------------------------------------------------------------ |
@@ -22,15 +44,6 @@
 | 7000          | System Actions            | Instances of system feedback or other changes in game system state, often in response to player actions. |
 | 8000          | Replay/Clickstream        | State captures or direct I/O events useful for replay systems |
 | 9000          | Open Block                | Reserved for events that do not cleanly fit within the spec |
-
-### Proposed Ranges
-
-Within each 1000s-level block, we attempt to develop useful 100s-level blocks, and typically use 10s-level digit to correspond to a particular “unit” of the interaction, with the 1s-place for the specific verb (which repeats across 10s-level units). While this is the general trend, it’s important to note that the use and meaning of the lower-level digits will always depend on the higher-level digit(s), and so exceptions will always exist for the general trends.
-
-Some general commitments:
-
-* X900+ is intentionally left blank in each block for custom events
-* 9000+ is intentionally left blank to be a custom block
 
 
 #### 1. Meta-Events
@@ -52,7 +65,7 @@ A few points of terminology:
 * Block-printed text: Text that is displayed all at once, with no animation
 * Progressive-printed text: Text that is displayed through an animation.
 
-Within the block, we have the following 100-level blocks:
+Within the category, we have the following 100-level blocks:
 
 1. **Narration (non-interactive)** - dialog events such as cutscenes, in which the player has little to no agency except to observe and possibly skip the dialog presented to them.
 2. **Dialog** - interactive dialog between the player and a non-player character, such as traditional dialog trees. This category should also include “implied” dialog in which the player character’s responses are pre-scripted, but is presented to the player in a similar way to traditional dialog, such as in point-and-click adventures, where the player clicks on an NPC, reads/listens through some pre-scripted dialog, and immediately resumes pointing and clicking.
@@ -60,7 +73,7 @@ Within the block, we have the following 100-level blocks:
 4. **Feedback** - Dialog and dialog-like text or audio that provides some feedback on some task or interaction the player attempted. In general, feedback events indicate positive or negative feedback from the system to the player, such as success or failure messages.
 5. **Hint** - Similar to Feedback, this is text that is displayed (or audio played) to give the user a suggestion for what to try next, or how to work their way out of a difficult spot. This includes games that give the player a “help” button or a guide character who the player can freely go to for help. Thus, this category is distinct from prompting dialog events.
 
-We propose the following general verbs, used within the various sub-blocks:
+We use the following general verbs, used within the various sub-blocks:
 
 1. **Start** - When an individual “line” of dialog begins to display (text) or play (audio/video).
 2. **Complete** - When an individual “line” of dialog completes its display or finishes playing. For block-printed text, the “start” event is also the time when the display finishes. Thus, this event is only used for animated text display.
@@ -84,14 +97,16 @@ Within the block, we assign the following 100-level blocks:
 
 Intentional (focal) player actions
 
-Within this block we’ve had a philosophy that there is no “click”, everything is an action taken within the context of the game, not related to the hardware interface.
-
-We’re currently thinking of a few "hundreds blocks” in this group:
+Within this category, there is no "click" verb, as every event represents an action taken within the game system, not related to the specific hardware interface.
 
 1. **Universal non-diegetic actions** - UI actions, open / close
-2. **Diegetic Actions**
-3. **State Machine Actions**
-4. **Game Specific “Interacts”**
+2. **Puzzle / Constructed Response Actions**
+3. **Point-and-Click Actions**
+4. **Combat Actions**
+5. **Spatial Navigation**
+6. **Resource Management Actions**
+7. **Simulation Actions**
+8. **Interface & Structural Navigation Actions**
 
 #### 5: Non-Active-Player Actions
 
@@ -111,7 +126,7 @@ Actions by actors controlled directly by the game system, such as NPCs or in-gam
 
 System-performed actions within gameplay
 
-The events by the game system, often as the result of a player action. They typically affect all players equally, whether the active player, a 3rd-party player, or AI agent
+The events generated by the game system, often as the end result of a player action. They typically affect all players equally, whether the active player, a 3rd-party player, or AI agent
 
 * Spawning/destroying entities
 * changes in underlying simulation values (health, currency, etc)
