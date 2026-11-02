@@ -24,6 +24,12 @@ Each of the four digits corresponds to one level of hierarchy in our taxonomy:
 
 While this is the general convention, it’s important to note that the use and meaning of the lower-level groupings will always depend to a degree on the higher-level grouping(s), and so some exceptions will always exist.
 
+### Using the Catalog
+
+This catalog documents a hierarchical taxonomy of events. Within any game, for each event that is identified, implementers should use the taxonomy to help locate the corresponding event type within the catalog. Then that specific event within the game should be assigned the identified ID code, i.e. the `event_id` field in the telemetry log should contain that ID code.
+
+The event name should be chosen to reflect the instantiation of that type of event within the game, though the event type can be used as a fallback.
+
 ### Top-Level Categories
 
 Some general commitments:
@@ -44,7 +50,6 @@ Some general commitments:
 | 7000          | System Actions            | Instances of system feedback or other changes in game system state, often in response to player actions. |
 | 8000          | Replay/Clickstream        | State captures or direct I/O events useful for replay systems |
 | 9000          | Open Block                | Reserved for events that do not cleanly fit within the spec |
-
 
 #### 1. Meta-Events
 
