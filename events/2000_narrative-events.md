@@ -17,7 +17,7 @@ Narrative & Communication events describe what is communicated and how it progre
 
 ### Narration (2000–2099)
 
-**Family intent**: Capture presentation and progression of non-interactive or minimally interactive narration (at most allow skip).
+**Intent**: Capture presentation and progression of non-interactive or minimally interactive narration (at most allow skip).
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -32,7 +32,7 @@ Narrative & Communication events describe what is communicated and how it progre
 
 ### Dialog (2100–2199)
 
-**Family intent**: Capture interactive dialog sequences between the player character and other characters, with or without choices/free response.
+**Intent**: Capture interactive dialog sequences between the player character and other characters, with or without choices/free response.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -51,7 +51,7 @@ Narrative & Communication events describe what is communicated and how it progre
 
 ### Tutorialization (2200–2299)
 
-**Family intent**: Capture presentation and progression of tutorial/instructional sequences.
+**Intent**: Capture presentation and progression of tutorial/instructional sequences.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -66,7 +66,7 @@ Narrative & Communication events describe what is communicated and how it progre
 
 ### Positive Feedback (2300–2399)
 
-**Family intent**: Capture affirmative feedback sequences presented in response to correct player actions.
+**Intent**: Capture affirmative feedback sequences presented in response to correct player actions.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -78,7 +78,7 @@ Narrative & Communication events describe what is communicated and how it progre
 
 ### Negative Feedback (2400–2499)
 
-**Family intent**: Capture corrective/negative feedback sequences presented in response to incorrect player actions.
+**Intent**: Capture corrective/negative feedback sequences presented in response to incorrect player actions.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -90,7 +90,7 @@ Narrative & Communication events describe what is communicated and how it progre
 
 ### Hinting (2500–2599)
 
-**Family intent**: Capture hint/help sequences. Includes player-initiated requests for hints.
+**Intent**: Capture hint/help sequences. Includes player-initiated requests for hints.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |

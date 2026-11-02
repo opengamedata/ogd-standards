@@ -25,7 +25,7 @@ Verb mapping (ones place) used consistently across segmentation families:
 
 ### Global Gameplay Segments (3000–3099)
 
-**Family intent**: Capture game-wide segments/phases (e.g., run start/end) when needed for analysis beyond session lifecycle.
+**Intent**: Capture game-wide segments/phases (e.g., run start/end) when needed for analysis beyond session lifecycle.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -36,7 +36,7 @@ Verb mapping (ones place) used consistently across segmentation families:
 
 ### Exclusive Topological Segments (3100–3199)
 
-**Family intent**: Capture ordered, mutually exclusive segments such as levels. Use tens place for subsegments (e.g., rounds within a level).
+**Intent**: Capture ordered, mutually exclusive segments such as levels. Use tens place for subsegments (e.g., rounds within a level).
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -51,7 +51,7 @@ Verb mapping (ones place) used consistently across segmentation families:
 
 ### Non-Exclusive Segments (3200–3299)
 
-**Family intent**: Capture overlapping segments such as quests, objectives, or parallel progress tracks.
+**Intent**: Capture overlapping segments such as quests, objectives, or parallel progress tracks.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -62,7 +62,7 @@ Verb mapping (ones place) used consistently across segmentation families:
 
 ### Spatial Regions (3300–3399)
 
-**Family intent**: Capture entering/exiting spatial regions such as map areas or rooms.
+**Intent**: Capture entering/exiting spatial regions such as map areas or rooms.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |

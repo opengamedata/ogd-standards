@@ -19,7 +19,7 @@ Player Action events describe player intent, not system response, not narrative 
 
 ### Universal Player Actions (4000–4099)
 
-**Family intent**: Capture explicit commitment or cancellation of a response/action.
+**Intent**: Capture explicit commitment or cancellation of a response/action.
 
 | Event Code | Event Name        | Description |
 | ------     | --------------    | ---------------------- |
@@ -28,7 +28,7 @@ Player Action events describe player intent, not system response, not narrative 
 
 ### Puzzle / Constructed Response (4100–4199)
 
-**Family intent**: Capture object manipulation actions used to construct, test, or modify puzzle solutions.
+**Intent**: Capture object manipulation actions used to construct, test, or modify puzzle solutions.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -43,7 +43,7 @@ Player Action events describe player intent, not system response, not narrative 
 
 ### Point-and-Click (4200–4299)
 
-**Family intent**: Capture direct click-based interaction with objects through selection, inspection, activation, or panning.
+**Intent**: Capture direct click-based interaction with objects through selection, inspection, activation, or panning.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -58,7 +58,7 @@ Player Action events describe player intent, not system response, not narrative 
 
 ### Combat (4300–4399)
 
-**Family intent**: Capture player intent to engage in combat-related actions.
+**Intent**: Capture player intent to engage in combat-related actions.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -72,7 +72,7 @@ Player Action events describe player intent, not system response, not narrative 
 
 ### Navigation (4400–4499)
 
-**Family intent**: Capture movement through space or time within the game world.
+**Intent**: Capture movement through space or time within the game world.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -86,7 +86,7 @@ Player Action events describe player intent, not system response, not narrative 
 
 ### Resource Management (4500–4599)
 
-**Family intent**: Capture intent to acquire, allocate, consume, lose, discard, or convert resources.
+**Intent**: Capture intent to acquire, allocate, consume, lose, discard, or convert resources.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -102,7 +102,7 @@ Player Action events describe player intent, not system response, not narrative 
 
 ### Simulation (4600–4699)
 
-**Family intent**: Capture player configuration or interrogation of simulation parameters (not simulation execution).
+**Intent**: Capture player configuration or interrogation of simulation parameters (not simulation execution).
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -117,7 +117,7 @@ Player Action events describe player intent, not system response, not narrative 
 
 ### Interface / Structural Navigation (4700–4799)
 
-**Family intent**: Capture player intent to navigate the game’s structure or in-game interfaces (not application-level menus).
+**Intent**: Capture player intent to navigate the game’s structure or in-game interfaces (not application-level menus).
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |

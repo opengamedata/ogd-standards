@@ -19,7 +19,7 @@ System Action events do not represent player intentions, analytic calculations, 
 
 ### Entity & Resource Changes (7100–7199)
 
-**Family intent**: Capture system actions that modify the material state of gameplay. These include the creation, removal, or transformation of discrete entities as well as system-driven changes to quantitative gameplay resources.
+**Intent**: Capture system actions that modify the material state of gameplay. These include the creation, removal, or transformation of discrete entities as well as system-driven changes to quantitative gameplay resources.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -32,7 +32,7 @@ System Action events do not represent player intentions, analytic calculations, 
 
 ### Movement & Spatial Change (7200–7299)
 
-**Family intent**: Capture system-driven changes to the spatial position of entities or environmental elements independent of direct player input.
+**Intent**: Capture system-driven changes to the spatial position of entities or environmental elements independent of direct player input.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -45,7 +45,7 @@ System Action events do not represent player intentions, analytic calculations, 
 
 ### Simulation Execution (7300–7399)
 
-**Family intent**: Capture system control of simulation execution states such as initialization, starting, pausing, or resetting simulation processes.
+**Intent**: Capture system control of simulation execution states such as initialization, starting, pausing, or resetting simulation processes.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -59,7 +59,7 @@ System Action events do not represent player intentions, analytic calculations, 
 
 ### Information & Visibility (7400–7499)
 
-**Family intent**: Capture system actions that change what gameplay-relevant information is visible or discoverable to the player.
+**Intent**: Capture system actions that change what gameplay-relevant information is visible or discoverable to the player.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -68,7 +68,7 @@ System Action events do not represent player intentions, analytic calculations, 
 
 ### In-Game Interface State (7500–7599)
 
-**Family intent**: Capture system-driven changes to the visibility or interactivity of in-game interface elements during gameplay.
+**Intent**: Capture system-driven changes to the visibility or interactivity of in-game interface elements during gameplay.
 
 | Event Code | Event Name               | Description            |
 | ------     | --------------           | ---------------------- |
@@ -80,7 +80,7 @@ System Action events do not represent player intentions, analytic calculations, 
 
 ### System Signaling (7600–7699)
 
-**Family intent**: Capture system-generated audiovisual cues that signal gameplay-relevant system states or conditions to the player.
+**Intent**: Capture system-generated audiovisual cues that signal gameplay-relevant system states or conditions to the player.
 
 These events represent system communication through ambient sensory channels such as sound, music, or visual effects. System signaling events indicate that a gameplay-relevant condition exists or is changing but do not themselves modify entities, resources, or simulation state.
 
