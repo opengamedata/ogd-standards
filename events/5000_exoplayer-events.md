@@ -7,7 +7,7 @@ Other Human Player Actions represent intentional actions performed by non-focal 
 These events mirror the structure of Player Actions but indicate that the acting entity is not the focal player.
 
 | Code Range | Family                   | Family Description |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 5100–5199  | Puzzle / Constructed Response | Object manipulation actions performed by other actors |
 | 5200–5299  | Point-and-Click | Selection and activation actions performed by other actors |
 | 5300–5399  | Combat | Combat actions performed by other actors |

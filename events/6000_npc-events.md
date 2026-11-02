@@ -9,7 +9,7 @@ These events mirror the structure of Player Actions but indicate that the acting
 System-Controlled Actor Action events should be used when an in-game actor performs an action. They should not be used for non-agentic world changes, environmental updates, or broader system state changes; those remain System Action events (7000s).
 
 | Code Range | Family                   | Family Description |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 6100–6199  | Puzzle / Constructed Response | Object manipulation actions performed by computer-controlled actors |
 | 6200–6299  | Point-and-Click          | Selection and activation actions performed by computer-controlled actors |
 | 6300–6399  | Combat                   | Combat actions performed by computer-controlled actors |

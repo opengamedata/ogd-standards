@@ -5,7 +5,7 @@ Player Action events capture intentional, atomic actions performed by the player
 Player Action events describe player intent, not system response, not narrative presentation, and not analytic or evaluative outcomes.
 
 | Code Range | Family | Family Description |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 4000–4099 | Universal Player Actions | Commit or cancel a gameplay response |
 | 4100–4199 | Puzzle / Constructed Response | Manipulate objects to construct or modify a solution |
 | 4200–4299 | Point-and-Click | Select, inspect, or activate objects via direct interaction |
@@ -22,7 +22,7 @@ Player Action events describe player intent, not system response, not narrative 
 **Intent**: Capture explicit commitment or cancellation of a response/action.
 
 | Event Code | Event Name        | Description |
-| ------     | --------------    | ---------------------- |
+| ---------- | --------------    | ---------------------- |
 | 4000       | submit response   | The player submits or commits a response or action. |
 | 4001       | cancel submission | The player cancels or withdraws a previously initiated response. |
 
@@ -31,7 +31,7 @@ Player Action events describe player intent, not system response, not narrative 
 **Intent**: Capture object manipulation actions used to construct, test, or modify puzzle solutions.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 4100       | pick up object | The player picks up or grabs an object. |
 | 4101       | place object (valid) | The player places an object in a valid location/configuration. |
 | 4102       | place object (invalid) | The player attempts to place an object in an invalid location/configuration. |
@@ -46,7 +46,7 @@ Player Action events describe player intent, not system response, not narrative 
 **Intent**: Capture direct click-based interaction with objects through selection, inspection, activation, or panning.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 4200       | select object | The player selects an object. |
 | 4201       | deselect object | The player deselects an object. |
 | 4202       | activate object | The player activates or triggers an object. |
@@ -61,7 +61,7 @@ Player Action events describe player intent, not system response, not narrative 
 **Intent**: Capture player intent to engage in combat-related actions.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 4300       | select target | The player selects a combat target. |
 | 4301       | initiate attack | The player initiates an attack. |
 | 4302       | defend | The player performs a defensive action. |
@@ -75,7 +75,7 @@ Player Action events describe player intent, not system response, not narrative 
 **Intent**: Capture movement through space or time within the game world.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 4400       | start movement | The player begins moving. |
 | 4401       | end movement | The player stops moving. |
 | 4402       | enter area | The player enters a defined area. |
@@ -89,7 +89,7 @@ Player Action events describe player intent, not system response, not narrative 
 **Intent**: Capture intent to acquire, allocate, consume, lose, discard, or convert resources.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 4500       | buy | The player purchases a resource or item. |
 | 4501       | sell | The player sells a resource or item. |
 | 4502       | store | The player stores a resource or item. |
@@ -105,7 +105,7 @@ Player Action events describe player intent, not system response, not narrative 
 **Intent**: Capture player configuration or interrogation of simulation parameters (not simulation execution).
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 4600       | assign | The player assigns an entity or resource. |
 | 4601       | unassign | The player removes an assignment. |
 | 4602       | set priority | The player sets a priority value. |
@@ -120,7 +120,7 @@ Player Action events describe player intent, not system response, not narrative 
 **Intent**: Capture player intent to navigate the game’s structure or in-game interfaces (not application-level menus).
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 4700       | select segment | The player selects a segment or subsegment. |
 | 4701       | open interface | The player opens an in-game interface element. |
 | 4702       | close interface | The player closes an in-game interface element. |

@@ -20,7 +20,7 @@ Meta-Events describe the container around gameplay, not actions within the game 
 **Intent**: Capture application start/stop and focus transitions.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 1000       | application launched     | The application is launched or started. |
 | 1001       | application terminated   | The application is closed or terminated. |
 | 1002       | application foregrounded | The application becomes the active foreground application. |
@@ -35,7 +35,7 @@ Sessions represent continuous periods of player activity within the application.
 Session lifecycle events describe this activity boundary and do not represent gameplay actions themselves.
 
 | Event Code | Event Name      | Description                |
-| ------     | -------------   | -------------------------- |
+| ---------- | -------------   | -------------------------- |
 | 1100       | session started | A gameplay session begins. |
 | 1101       | session paused  | The gameplay session is paused. |
 | 1102       | session resumed | A paused gameplay session resumes. |
@@ -47,7 +47,7 @@ Session lifecycle events describe this activity boundary and do not represent ga
 **Intent**: Capture player navigation through application-level menus and non-gameplay screens.
 
 | Event Code | Event Name              | Description                                 |
-| ------     | ----------------        | -------------------------                   |
+| ---------- | ----------------        | -------------------------                   |
 | 1200       | open main menu          | The player opens the main application menu. |
 | 1201       | close main menu         | The player closes the main application menu. |
 | 1202       | navigate menu screen    | The player moves between application-level menu screens without selecting an option. |
@@ -59,7 +59,7 @@ Session lifecycle events describe this activity boundary and do not represent ga
 **Intent**: Capture changes to application/session configuration outside gameplay.
 
 | Event Code | Event Name              | Description                                 |
-| ------     | ----------------        | -------------------------                   |
+| ---------- | ----------------        | -------------------------                   |
 | 1300 | open settings | The player opens the settings screen. |
 | 1301 | change setting | The player changes a setting value. |
 | 1302 | reset settings | Settings are reset to defaults. |
@@ -70,7 +70,7 @@ Session lifecycle events describe this activity boundary and do not represent ga
 **Intent**: Capture profile selection and identity/authentication actions outside gameplay.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 1400 | select profile | A player profile is selected. |
 | 1401 | login | A player logs in. |
 | 1402 | logout | A player logs out. |
@@ -82,7 +82,7 @@ Session lifecycle events describe this activity boundary and do not represent ga
 **Intent**: Capture application readiness states and transitions that occur outside gameplay. Loading and transition events describe internal application states that occur while the application is already running, such as loading assets, preparing gameplay environments, or transitioning between major modes of the application.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 1500 | start loading | Application-level loading begins. |
 | 1501 | loading complete | Application-level loading completes. |
 | 1502 | start application transition | A non-gameplay application transition begins. |
@@ -96,7 +96,7 @@ Matchmaking events describe system processes that place players into multiplayer
 Matchmaking events capture how multiplayer sessions are formed but do not represent gameplay actions themselves.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 1600 | enter matchmaking | The player enters a matchmaking process to be placed into a gameplay session. |
 | 1601 | exit matchmaking | The player leaves a matchmaking process before being placed into a session. |
 | 1602 | matchmaking match found | The system identifies a compatible match for the player. |

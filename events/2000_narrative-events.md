@@ -20,7 +20,7 @@ Narrative & Communication events describe what is communicated and how it progre
 **Intent**: Capture presentation and progression of non-interactive or minimally interactive narration (at most allow skip).
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 2001       | enter narration | Narration sequence becomes available/active. |
 | 2002       | exit narration | Narration sequence is exited and no longer active. |
 | 2003       | abandon narration | Narration ends before completion due to interruption or quit. |
@@ -35,7 +35,7 @@ Narrative & Communication events describe what is communicated and how it progre
 **Intent**: Capture interactive dialog sequences between the player character and other characters, with or without choices/free response.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 2101       | enter dialog | Dialog sequence becomes available/active. |
 | 2102       | exit dialog | Dialog sequence is exited and no longer active. |
 | 2103       | abandon dialog | Dialog ends before completion due to interruption or quit. |
@@ -54,7 +54,7 @@ Narrative & Communication events describe what is communicated and how it progre
 **Intent**: Capture presentation and progression of tutorial/instructional sequences.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 2201       | enter tutorial | Tutorial sequence becomes available/active. |
 | 2202       | exit tutorial | Tutorial sequence is exited and no longer active. |
 | 2203       | abandon tutorial | Tutorial ends before completion due to interruption or quit. |
@@ -69,7 +69,7 @@ Narrative & Communication events describe what is communicated and how it progre
 **Intent**: Capture affirmative feedback sequences presented in response to correct player actions.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 2310       | start positive feedback | Positive feedback sequence begins. |
 | 2311       | complete positive feedback | Positive feedback sequence completes naturally. |
 | 2312       | clear positive feedback | Positive feedback display is cleared or no longer available. |
@@ -81,7 +81,7 @@ Narrative & Communication events describe what is communicated and how it progre
 **Intent**: Capture corrective/negative feedback sequences presented in response to incorrect player actions.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 2410       | start negative feedback | Negative feedback sequence begins. |
 | 2411       | complete negative feedback | Negative feedback sequence completes naturally. |
 | 2412       | clear negative feedback | Negative feedback display is cleared or no longer available. |
@@ -93,7 +93,7 @@ Narrative & Communication events describe what is communicated and how it progre
 **Intent**: Capture hint/help sequences. Includes player-initiated requests for hints.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 2510       | start hint | Hint/help sequence begins. |
 | 2511       | complete hint | Hint/help sequence completes naturally. |
 | 2512       | clear hint | Hint/help display is cleared or no longer available. |

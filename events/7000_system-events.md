@@ -7,7 +7,7 @@ These events represent system agency within gameplay. They describe observable c
 System Action events do not represent player intentions, analytic calculations, or telemetry outcomes. Instead, they record the system’s operational effects on the game environment, entities, resources, or gameplay information.
 
 | Code Range | Family                   | Family Description     |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 7100–7199  | Entity & Resource Changes | Creation, removal, or transformation of entities and quantitative resources |
 | 7200–7299  | Movement & Spatial Change | System-driven spatial movement of entities or environmental elements |
 | 7300–7399  | Simulation Execution | Operational control of simulation execution states |
@@ -22,7 +22,7 @@ System Action events do not represent player intentions, analytic calculations, 
 **Intent**: Capture system actions that modify the material state of gameplay. These include the creation, removal, or transformation of discrete entities as well as system-driven changes to quantitative gameplay resources.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 7110       | create entity | The system introduces a new entity into active gameplay. |
 | 7111       | remove entity | The system removes an entity from active gameplay. |
 | 7112       | transform entity | The system changes an entity’s form, type, or role while preserving continuity within gameplay. |
@@ -35,7 +35,7 @@ System Action events do not represent player intentions, analytic calculations, 
 **Intent**: Capture system-driven changes to the spatial position of entities or environmental elements independent of direct player input.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 7200       | start entity movement | The system initiates continuous movement of an entity. |
 | 7201       | end entity movement | The system ends continuous movement of an entity. |
 | 7202       | reposition entity | The system instantly relocates an entity to a new position. |
@@ -48,7 +48,7 @@ System Action events do not represent player intentions, analytic calculations, 
 **Intent**: Capture system control of simulation execution states such as initialization, starting, pausing, or resetting simulation processes.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 7300       | initialize simulation | The system initializes a simulation process. |
 | 7301       | start simulation | The system begins executing a simulation. |
 | 7302       | pause simulation | The system pauses simulation execution. |
@@ -62,7 +62,7 @@ System Action events do not represent player intentions, analytic calculations, 
 **Intent**: Capture system actions that change what gameplay-relevant information is visible or discoverable to the player.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 7400       | reveal information | The system makes gameplay-relevant information visible or discoverable to the player. |
 | 7401       | conceal information | The system hides gameplay-relevant information from the player. |
 
@@ -71,7 +71,7 @@ System Action events do not represent player intentions, analytic calculations, 
 **Intent**: Capture system-driven changes to the visibility or interactivity of in-game interface elements during gameplay.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 7500       | display interface element | The system displays an in-game interface element. |
 | 7501       | hide interface element | The system hides an in-game interface element. |
 | 7502       | update interface element | The system updates the content or state of an interface element. |
@@ -85,7 +85,7 @@ System Action events do not represent player intentions, analytic calculations, 
 These events represent system communication through ambient sensory channels such as sound, music, or visual effects. System signaling events indicate that a gameplay-relevant condition exists or is changing but do not themselves modify entities, resources, or simulation state.
 
 | Event Code | Event Name               | Description            |
-| ------     | --------------           | ---------------------- |
+| ---------- | --------------           | ---------------------- |
 | 7600       | start system signal | The system begins emitting a gameplay-relevant audiovisual signal. |
 | 7601       | end system signal | The system stops emitting a gameplay-relevant audiovisual signal. |
 | 7602       | change system signal | The system changes the type or state of an active signal. |
