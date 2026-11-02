@@ -88,7 +88,7 @@ Inferring such reasoning is the domain of later analysis.
 
 ### Resource Management (4500–4599)
 
-**Intent**: Capture intent to acquire, allocate, consume, lose, discard, or convert resources.
+**Intent**: Capture attempts to acquire, allocate, consume, lose, discard, or convert resources.
 
 | Event Code | Event Name        | Description            |
 | ---------- | --------------    | ---------------------- |
@@ -97,10 +97,9 @@ Inferring such reasoning is the domain of later analysis.
 | 4502       | store             | The player stores a resource or item. |
 | 4503       | collect           | The player collects or acquires a resource. |
 | 4504       | use resource      | The player uses or consumes a resource. |
-| 4505       | lose resource     | The player loses a resource. |
-| 4506       | discard resource  | The player discards a resource. |
-| 4507       | allocate resource | The player allocates a resource. |
-| 4508       | convert resource  | The player converts one resource into another. |
+| 4505       | discard resource  | The player discards a resource. |
+| 4506       | allocate resource | The player allocates a resource. |
+| 4507       | convert resource  | The player converts one resource into another. |
 
 ### Simulation (4600–4699)
 
