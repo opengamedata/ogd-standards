@@ -13,16 +13,15 @@ jobs:
     name: Generate Event Standard PDF
     if: startsWith(github.event.release.tag_name, 'events-')
     runs-on: ubuntu-latest
+    container: pandoc/latex:3.10-ubuntu
     steps:
     - uses: actions/checkout@v3
     - name: Build PDF
-      uses: docker://pandoc/latex:3.10-ubuntu
-      with:
-        args: sh -c "cd ${{  env.SOURCE_PATH }} && pandoc *.md -V geometry:${{ env.CUSTOM_GEOMETRY }} -f markdown -t pdf -s -o ${{ env.OUTFILE_NAME }}"
-        # cd ${{ env.SOURCE_PATH }}
-        # pandoc *.md -V geometry:${{ env.CUSTOM_GEOMETRY }} -f markdown -t pdf -s -o ${{ env.OUTFILE_NAME }}
-    # - name: Install GitHub CLI
-    #   run: apt update && apt install gh
+      run: |
+        cd ${{ env.SOURCE_PATH }}
+        pandoc *.md -V geometry:${{ env.CUSTOM_GEOMETRY }} -f markdown -t pdf -s -o ${{ env.OUTFILE_NAME }}
+    - name: Install GitHub CLI
+      run: apt update && apt install gh
     - name: Attach PDF to release
       run: gh release upload $GITHUB_REF ${{ env.SOURCE_PATH }}/${{ env.OUTFILE_NAME }}
     - name: Upload PDF as artifact
