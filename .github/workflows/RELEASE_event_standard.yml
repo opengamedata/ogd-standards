@@ -42,4 +42,4 @@ jobs:
       with:
         name: ${{ env.OUTFILE_NAME }}
     - name: Attach PDF to release
-      run: gh release upload $GITHUB_REF ${{ env.OUTFILE_NAME }}
+      run: gh release upload $GITHUB_REF ${{ github.event.release.tag_name }}
