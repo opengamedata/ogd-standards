@@ -20,7 +20,7 @@ jobs:
     - name: Build PDF
       run: |
         cd ${{ env.SOURCE_PATH }}
-        pandoc *.md -V geometry:${{ env.CUSTOM_GEOMETRY }} -f markdown -t pdf -s -o ${{ env.OUTFILE_NAME }}
+        pandoc *.md -V geometry:${{ env.CUSTOM_GEOMETRY }} -f markdown -t pdf --variable colorlinks=true -s -o ${{ env.OUTFILE_NAME }}
     - name: Upload PDF as artifact
       uses: actions/upload-artifact@v7
       with:
