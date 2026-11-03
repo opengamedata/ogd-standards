@@ -4,8 +4,6 @@ on:
     types: created
 
 env:
-  SOURCE_PATH: events
-  CUSTOM_GEOMETRY: margin=2cm
   OUTFILE_NAME: event-standard.pdf
 
 jobs:
@@ -14,16 +12,34 @@ jobs:
     if: startsWith(github.event.release.tag_name, 'events-')
     runs-on: ubuntu-latest
     container: pandoc/latex:3.10-ubuntu
+    env:
+      CUSTOM_GEOMETRY: margin=2cm
+      SOURCE_PATH: events
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v7
     - name: Build PDF
       run: |
         cd ${{ env.SOURCE_PATH }}
-        pandoc *.md -V geometry:${{ env.CUSTOM_GEOMETRY }} -f markdown -t pdf -s -o ${{ env.OUTFILE_NAME }}
-    - name: Attach PDF to release
-      run: gh release upload $GITHUB_REF ${{ env.SOURCE_PATH }}/${{ env.OUTFILE_NAME }}
+        pandoc *.md -V geometry:${{ env.CUSTOM_GEOMETRY }} -f markdown -t pdf --variable colorlinks=true -s -o ${{ env.OUTFILE_NAME }}
     - name: Upload PDF as artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
-        name: event-standard.pdf
-        path: ${{ env.SOURCE_PATH }}/${{ env.OUTFILE_NAME }}
+        name: ${{ env.OUTFILE_NAME }}
+        path: ${{ env.SOURCE_PATH }}
+  
+  attach_pdf:
+    name: Attach Event Standard PDF to Release
+    needs: [generate_pdf]
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v7
+    - name: Download generated PDF
+      uses: actions/download-artifact@v7
+      with:
+        name: ${{ env.OUTFILE_NAME }}
+    - name: Attach PDF to release
+      run: gh release upload ${{ github.event.release.tag_name }} ${{ env.OUTFILE_NAME }}
