@@ -1,0 +1,36 @@
+# Workflow to check that the generated event codes match the event standard.
+name: OGD Standards - Event Code Check Script
+run-name: ${{ format('{0} - {1}', github.workflow, github.event_name == 'push' && github.event.head_commit.message || github.event.pull_request.title) }}
+on:
+  pull_request:
+    paths:
+      - 'events/**'
+      - 'generated/**'
+      - 'scripts/generate_event_codes.py'
+      - '.github/workflows/CI_event_codes.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'events/**'
+      - 'generated/**'
+      - 'scripts/generate_event_codes.py'
+      - '.github/workflows/CI_event_codes.yml'
+
+jobs:
+  check_event_codes:
+    name: Check generated event codes match the standard
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v7.0.1
+    - uses: actions/setup-python@v7.0.0
+      with:
+        python-version: '3.12'
+    - name: Regenerate event codes
+      run: python scripts/generate_event_codes.py
+    - name: Fail if the committed files are out of date
+      run: |
+        git add --intent-to-add generated/
+        if ! git diff --exit-code -- generated/; then
+          echo "::error::generated/ is out of date. Run 'python scripts/generate_event_codes.py' and commit the result."
+          exit 1
+        fi
